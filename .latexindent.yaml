@@ -1,0 +1,6 @@
+indentPreamble: 0
+defaultIndent: "  "
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 100
+preserveBlankLines: 1

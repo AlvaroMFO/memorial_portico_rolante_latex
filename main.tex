@@ -1,0 +1,137 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+% Codificacao e idioma
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+
+% Layout
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=3cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm
+}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+\setlength{\parindent}{1.25cm}
+
+% Matematica e unidades
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker={,},
+  per-mode=symbol
+}
+
+% Tabelas e figuras
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\graphicspath{{assets/images/}}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Utilitarios
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  citecolor=blue!50!black,
+  urlcolor=blue!60!black,
+  pdftitle={Memorial de Cálculo - Pórtico Rolante},
+  pdfauthor={Alvaro Oliveira}
+}
+\usepackage{csquotes}
+
+% Referencias bibliograficas
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=nyt
+]{biblatex}
+\addbibresource{content/references/referencias.bib}
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries} % estilo
+  {\thechapter}               % só o número
+  {1em}                       % espaço entre número e título
+  {}                          % código antes do título
+
+% Comandos de apoio
+\newcommand{\titulo}{Memorial de Cálculo - Pórtico Rolante}
+\newcommand{\alvaro}{Alvaro Miguel Ferreira de Oliveira}
+\newcommand{\alvaroRa}{111218}
+\newcommand{\duin}{Gabriel Lima Alves de Souza}
+\newcommand{\duinRa}{111713}
+\newcommand{\leo}{Leonardo Alison da Silva}
+\newcommand{\leoRa}{112509}
+\newcommand{\disciplina}{Projeto de Máquinas}
+\newcommand{\curso}{Engenharia Mecânica}
+\newcommand{\instituicao}{Fundação Hermínio Ometto}
+\newcommand{\cidade}{Araras}
+\newcommand{\ano}{2026}
+
+\begin{document}
+
+% Capa simples
+\pagenumbering{gobble}
+\begin{titlepage}
+  \centering
+  {\large \instituicao \par}
+  \vspace{2.5cm}
+  {\Large \bfseries \titulo \par}
+  \vspace{2cm}
+  {\large
+    \begin{tabular}{@{}l l@{}}
+      \alvaro & RA: \alvaroRa \\
+      \duin   & RA: \duinRa   \\
+      \leo    & RA: \leoRa
+    \end{tabular}
+    \par
+  }
+  \vfill
+  {\large \curso \par}
+  {\large Disciplina: \disciplina \par}
+  \vspace{1.5cm}
+  {\large \cidade, SP \par}
+  {\large \ano \par}
+\end{titlepage}
+
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+
+\pagenumbering{arabic}
+
+\chapter{Introdução}
+\input{content/sections/01_introducao}
+
+\chapter{Dados do Projeto}
+\input{content/sections/02_dados_do_projeto}
+
+\chapter{Sistema de Elevação}
+\input{content/sections/03_sistema_de_elevacao}
+
+\appendix
+\chapter{Apêndices}
+\input{content/sections/n_apendices}
+
+% \printbibliography[title={Referencias}]
+
+\end{document}
