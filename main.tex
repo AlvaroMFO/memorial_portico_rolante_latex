@@ -16,8 +16,9 @@
 }
 \usepackage{setspace}
 \onehalfspacing
-\usepackage{parskip}
+\usepackage{indentfirst}
 \setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
 
 % Matematica e unidades
 \usepackage{amsmath,amssymb,mathtools}
@@ -120,17 +121,17 @@
 \pagenumbering{arabic}
 
 \chapter{Introdução}
-\input{content/sections/01_introducao}
+\input{content/sections/01_introducao/main}
 
 \chapter{Dados do Projeto}
-\input{content/sections/02_dados_do_projeto}
+\input{content/sections/02_dados_do_projeto/main}
 
 \chapter{Sistema de Elevação}
-\input{content/sections/03_sistema_de_elevacao}
+\input{content/sections/03_sistema_de_elevacao/main}
 
 \appendix
 \chapter{Apêndices}
-\input{content/sections/n_apendices}
+\input{content/sections/n_appendices/main}
 
 % \printbibliography[title={Referencias}]
 
