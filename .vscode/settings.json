@@ -37,20 +37,22 @@
     "editor.wrappingIndent": "same"
   },
   "latex-workshop.formatting.latex": "latexindent",
-  "latex-workshop.formatting.latexindent.path": "C:/Strawberry/perl/bin/perl.exe",
+  "latex-workshop.formatting.latexindent.path": "latexindent",
   "latex-workshop.formatting.latexindent.args": [
-    "C:/Users/Alvaro.ALVARO-OLIVEIRA/AppData/Local/Programs/MiKTeX/scripts/latexindent/latexindent.pl",
     "%TMPFILE%",
     "-l=%DIR%/.latexindent.yaml"
   ],
   "ltex.enabled": true,
   "ltex.language": "pt-BR",
-  "ltex.diagnosticSeverity": "information",
-  "ltex.enabledRules": {
-    "pt-BR": []
-  },
+  "ltex.diagnosticSeverity": "warning",
   "ltex.disabledRules": {
     "pt-BR": []
+  },
+  "ltex.hiddenFalsePositives": {
+    "pt-BR": [
+      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Dummy\\\\d+moitão.*\"}",
+      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina\\\\d+moitão.*\"}"
+    ]
   },
   "ltex.dictionary": {
     "pt-BR": [
@@ -64,5 +66,10 @@
       "Strawberry",
       "moitão"
     ]
+  },
+  "ltex.latex.commands": {
+    "\\si{}": "dummy",
+    "\\SI{}{}": "dummy",
+    "\\titleformat{}[]": "dummy"
   }
 }
