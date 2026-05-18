@@ -2,15 +2,6 @@
 
 Projeto em LaTeX para documentação completa do dimensionamento de um pórtico rolante (disciplina de Projeto de Máquinas - Engenharia Mecânica).
 
-## Objetivo
-
-Este repositório organiza um memorial de cálculo extenso, com:
-
-- desenvolvimento matemático;
-- tabelas e figuras;
-- referências normativas e catálogos;
-- anexos técnicos.
-
 ## Requisitos
 
 ### 1) Distribuição LaTeX
@@ -21,15 +12,36 @@ Este repositório organiza um memorial de cálculo extenso, com:
 Site oficial:
 - [https://miktex.org/download](https://miktex.org/download)
 
-### 2) Ferramenta de build
+### 2) Formatação automática (obrigatório para formatar no editor)
 
-- `latexmk` (normalmente já disponível no MiKTeX).
-- Backend bibliográfico `biber` (também via MiKTeX).
+Para a formatação (`Format Document` / `Format on Save`) funcionar com `latexindent` no Windows, é necessário um Perl completo com módulos extras.
+
+- Instale o **Strawberry Perl**:
+
+```powershell
+winget install StrawberryPerl.StrawberryPerl
+```
+
+- Instale os módulos Perl exigidos pelo `latexindent`:
+
+```powershell
+C:\Strawberry\perl\bin\cpan.bat App::cpanminus
+```
+
+```powershell
+C:\Strawberry\perl\bin\cpanm.bat YAML::Tiny File::HomeDir Unicode::GCString Log::Log4perl
+```
+
+- Feche e abra novamente o Cursor/VS Code após a instalação.
 
 ### 3) Editor (opcional, recomendado)
 
 - Cursor/VS Code com extensão **LaTeX Workshop**.
-- O projeto já possui configuração em `.vscode/settings.json` para compilar sempre em `output/`.
+- Cursor/VS Code com extensão **LTeX+** para revisão ortográfica e gramatical em português.
+- O projeto já possui configuração em `.vscode/settings.json` para:
+  - compilar sempre em `output/`;
+  - formatar com `latexindent` usando `perl.exe` + `latexindent.pl` do MiKTeX;
+  - habilitar o LTeX em `pt-BR`, com dicionário inicial para termos técnicos do projeto.
 
 ## Estrutura do projeto
 
@@ -44,40 +56,15 @@ Site oficial:
 No terminal, na raiz do projeto:
 
 ```powershell
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=output main.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
-
-Saída esperada:
-
-- PDF final em `output/main.pdf`.
 
 ## Compilação automática no editor
 
-Este projeto já está configurado para auto build no diretório correto:
+Este projeto já está configurado para compilação automática no diretório correto.
 
-- `latex-workshop.latex.outDir = %DIR%/output`
-- receita `latexmk` com `-outdir=%DIR%/output`
+## Revisão de texto e gramática (LTeX+)
 
-Arquivo de configuração:
+Necessário instalar a extensão **LTeX+**. [Página de Instalação do LTeX+](https://ltex-plus.github.io/ltex-plus/installation-usage.html#via-editor-extensions)
 
-- `.vscode/settings.json`
-
-## Bibliografia
-
-- Arquivo BibTeX/BibLaTeX: `content/references/referencias.bib`.
-- As citações no texto usam `\cite{chave}`.
-- A lista final é gerada por `\printbibliography` em `main.tex`.
-
-## Fluxo de trabalho recomendado
-
-1. Fazer os cálculos no papel.
-2. Transcrever para as seções em `content/sections/`.
-3. Adicionar figuras em `assets/images/`.
-4. Inserir/atualizar referências em `content/references/referencias.bib`.
-5. Compilar e revisar `output/main.pdf`.
-
-## Solução de problemas
-
-- **Pacote LaTeX ausente**: abrir MiKTeX Console, atualizar pacotes e recompilar.
-- **Bibliografia não aparece**: verificar se `biber` está instalado e se a chave `\cite{...}` existe no `.bib`.
-- **Arquivos aparecendo na raiz**: compilar com `-outdir=output` e manter a receita do LaTeX Workshop ativa.
+As marcações aparecem diretamente no editor.

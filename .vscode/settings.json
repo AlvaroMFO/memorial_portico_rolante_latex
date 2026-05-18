@@ -37,9 +37,32 @@
     "editor.wrappingIndent": "same"
   },
   "latex-workshop.formatting.latex": "latexindent",
-  "latex-workshop.formatting.latexindent.path": "latexindent",
+  "latex-workshop.formatting.latexindent.path": "C:/Strawberry/perl/bin/perl.exe",
   "latex-workshop.formatting.latexindent.args": [
+    "C:/Users/Alvaro.ALVARO-OLIVEIRA/AppData/Local/Programs/MiKTeX/scripts/latexindent/latexindent.pl",
     "%TMPFILE%",
     "-l=%DIR%/.latexindent.yaml"
-  ]
+  ],
+  "ltex.enabled": true,
+  "ltex.language": "pt-BR",
+  "ltex.diagnosticSeverity": "information",
+  "ltex.enabledRules": {
+    "pt-BR": []
+  },
+  "ltex.disabledRules": {
+    "pt-BR": []
+  },
+  "ltex.dictionary": {
+    "pt-BR": [
+      "LaTeX",
+      "MiKTeX",
+      "latexmk",
+      "latexindent",
+      "pórtico rolante",
+      "LTeX",
+      "PDFs",
+      "Strawberry",
+      "moitão"
+    ]
+  }
 }
