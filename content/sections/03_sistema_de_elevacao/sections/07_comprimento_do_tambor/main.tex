@@ -1,1 +1,119 @@
-Esta seção está em elaboração e será detalhada na versão final deste memorial.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{content/sections/03_sistema_de_elevacao/sections/07_comprimento_do_tambor/drawings/tambor.pdf}
+  \caption{Representação dos comprimentos do tambor}
+  \label{fig:representacao_dos_comprimentos_do_tambor}
+\end{figure}
+
+Para determinar o comprimento do tambor, primeiro é necessário definir o número de ranhuras.
+
+O número de ranhuras úteis é dado pela equação:
+
+\begin{equation}
+  n_{r_u} = \frac{H \cdot n_c \cdot 1,2}{\pi \cdot D_t}
+  \label{eq:numero_de_ranhuras_uteis}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $n_{r_u}$: número de ranhuras úteis.
+  \item $H$: altura de elevação em $\si{\meter}$.
+  \item $n_c$: número de cabos.
+  \item $D_t$: diâmetro do tambor em $\si{\meter}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:numero_de_ranhuras_uteis}:
+
+\begin{align*}
+  n_{r_u} & = \frac{15 \cdot 4 \cdot 1,2}{\pi \cdot 304 \cdot 10^{-3}} \\
+  n_{r_u} & = 75
+\end{align*}
+
+Adotou-se $n_{r_u} = 76$, de modo a garantir um número par de ranhuras.
+
+O número total de ranhuras é dado pela equação:
+
+\begin{equation}
+  n_{t_r} = n_{r_u} + 6
+  \label{eq:numero_total_de_ranhuras}
+\end{equation}
+
+Substituindo os valores na equação \eqref{eq:numero_total_de_ranhuras}:
+
+\begin{align*}
+  n_{t_r} & = 76 + 6 \\
+  n_{t_r} & = 82
+\end{align*}
+
+O comprimento ranhurado é dado pela equação:
+
+\begin{equation}
+  L_{\text{ranhurado}} = n_{t_r} \cdot p
+  \label{eq:comprimento_ranhurado}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $L_{\text{ranhurado}}$: comprimento ranhurado em $\si{\milli\meter}$.
+  \item $n_{t_r}$: número total de ranhuras.
+  \item $p$: passo da ranhura em $\si{\milli\meter}$.
+\end{itemize}
+
+O passo da ranhura foi obtido a partir da Tabela 1 da norma PB 1447 \cite{pb1447}:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{content/sections/03_sistema_de_elevacao/sections/07_comprimento_do_tambor/images/dimensoes_ranhuras.png}
+  \caption{Dimensões das ranhuras \cite{pb1447}}
+  \label{fig:dimensoes_ranhuras}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \caption{Dimensões das ranhuras obtidas segundo a PB 1447 \cite{pb1447}}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Descrição               & Símbolo & Valor                  \\
+    \midrule
+    Passo da ranhura        & $p$     & \SI{21}{\milli\meter}  \\
+    Profundidade da ranhura & $h$     & \SI{7,5}{\milli\meter} \\
+    Raio da ranhura         & $R$     & \SI{10}{\milli\meter}  \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Substituindo os valores na equação \eqref{eq:comprimento_ranhurado}:
+
+\begin{align*}
+  L_{\text{ranhurado}} & = 82 \cdot 21             \\
+  L_{\text{ranhurado}} & = \SI{1722}{\milli\meter}
+\end{align*}
+
+O comprimento do tambor é dado pela equação:
+
+\begin{equation}
+  L_t = 2L_1 + L_2 + L_{\text{ranhurado}}
+  \label{eq:comprimento_do_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $L_t$: comprimento do tambor em $\si{\milli\meter}$.
+  \item $L_1$: comprimento entre o fim das ranhuras e a extremidade do tambor em $\si{\milli\meter}$.
+  \item $L_2$: espaçamento central entre as ranhuras em $\si{\milli\meter}$.
+  \item $L_{\text{ranhurado}}$: comprimento ranhurado em $\si{\milli\meter}$.
+\end{itemize}
+
+Para os comprimentos $L_1$ e $L_2$, adotou-se \SI{200}{\milli\meter}, considerando a configuração do moitão com 4 cabos e o espaço necessário para acomodação adequada das extremidades e da região central do enrolamento.
+
+Substituindo os valores na equação \eqref{eq:comprimento_do_tambor}:
+
+\begin{align*}
+  L_t & = 2 \cdot 200 + 200 + 1722        \\
+  L_t & = \boxed{\SI{2322}{\milli\meter}}
+\end{align*}
