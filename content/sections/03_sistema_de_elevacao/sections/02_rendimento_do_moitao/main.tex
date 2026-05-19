@@ -1,39 +1,50 @@
 
 O rendimento do moitão é dado pela equação:
+
 \begin{equation}
   \eta_{\text{moitão}} = \frac{1}{K}\frac{(1-{\eta_{\text{rolamento}}}^K)}{(1-\eta_{\text{rolamento}})}
   \label{eq:rendimento_moitao}
 \end{equation}
+
 Onde:
+
 \begin{itemize}[leftmargin=1.25cm]
   \item $\eta_{\text{moitão}}$: rendimento do moitão.
   \item $K$: meio-ramal.
   \item $\eta_{\text{rolamento}}$: rendimento do rolamento.
 \end{itemize}
+
 \vspace{1em}
 
 O meio-ramal é dado pela equação:
+
 \begin{equation}
   K = \frac{n_c}{2}
   \label{eq:meio_ramal}
 \end{equation}
+
 Onde:
+
 \begin{itemize}[leftmargin=1.25cm]
   \item $K$: meio-ramal.
   \item $n_c$: número de cabos.
 \end{itemize}
+
 \vspace{1em}
 
 Substituindo os valores na equação \eqref{eq:meio_ramal}:
+
 \begin{align*}
   K & = \frac{4}{2} \\
   K & = 2
 \end{align*}
 
 O rendimento do rolamento adotado é de $0,985$.
+
 \vspace{1em}
 
 Substituindo os valores na equação \eqref{eq:rendimento_moitao}:
+
 \begin{align*}
   \eta_{\text{moitão}} & = \frac{1}{2}\frac{(1-0,985^2)}{(1-0,985)} \\
   \eta_{\text{moitão}} & = \boxed{0,9925}

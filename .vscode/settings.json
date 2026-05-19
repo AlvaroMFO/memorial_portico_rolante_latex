@@ -52,7 +52,7 @@
     "pt-BR": [
       "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Dummy.*\"}",
       "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina.*\"}",
-      "{\"rule\":\"PARONYM_POLIA_522\",\"sentence\":\".*das polias.*\"}"
+      "{\"rule\":\"PARONYM_POLIA_522\",\"sentence\":\".*polia.*\"}"
     ]
   },
   "ltex.dictionary": {
@@ -66,7 +66,9 @@
       "PDFs",
       "Strawberry",
       "moitão",
-      "polia"
+      "CIMAF",
+      "Warrington",
+      "Seale"
     ]
   },
   "ltex.latex.commands": {
