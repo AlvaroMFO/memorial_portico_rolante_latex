@@ -50,8 +50,8 @@
   },
   "ltex.hiddenFalsePositives": {
     "pt-BR": [
-      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Dummy\\\\d+moitão.*\"}",
-      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina\\\\d+moitão.*\"}",
+      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Dummy.*\"}",
+      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina.*\"}",
       "{\"rule\":\"PARONYM_POLIA_522\",\"sentence\":\".*das polias.*\"}"
     ]
   },
@@ -72,6 +72,11 @@
   "ltex.latex.commands": {
     "\\si{}": "dummy",
     "\\SI{}{}": "dummy",
-    "\\titleformat{}[]": "dummy"
+    "\\titleformat{}[]": "dummy",
+    "\\boxed{}": "dummy"
+  },
+  "ltex.latex.environments": {
+    "equation": "ignore",
+    "math": "ignore"
   }
 }
