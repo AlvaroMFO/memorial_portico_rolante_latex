@@ -51,7 +51,8 @@
   "ltex.hiddenFalsePositives": {
     "pt-BR": [
       "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Dummy\\\\d+moitão.*\"}",
-      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina\\\\d+moitão.*\"}"
+      "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina\\\\d+moitão.*\"}",
+      "{\"rule\":\"PARONYM_POLIA_522\",\"sentence\":\".*das polias.*\"}"
     ]
   },
   "ltex.dictionary": {
@@ -64,7 +65,8 @@
       "LTeX",
       "PDFs",
       "Strawberry",
-      "moitão"
+      "moitão",
+      "polia"
     ]
   },
   "ltex.latex.commands": {
