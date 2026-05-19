@@ -1,0 +1,39 @@
+A força de tração no cabo é dada pela equação:
+\begin{equation}
+  T = \frac{W_s}{n_c \cdot \eta_{\text{moitão}}} \cdot 10^{-1}
+  \label{eq:forca_de_tracao_no_cabo}
+\end{equation}
+Onde:
+\begin{itemize}[leftmargin=1.25cm]
+  \item $T$: força de tração no cabo em $\si{\deca\newton}$.
+  \item $W_s$: carga útil somada ao peso do moitão em $\si{\newton}$.
+  \item $n_c$: número de cabos.
+  \item $\eta_{\text{moitão}}$: rendimento do moitão.
+\end{itemize}
+\vspace{1em}
+
+A carga útil somada ao peso do moitão é dada pela equação:
+\begin{equation}
+  W_s = W_u + G_{\text{moitão}}
+  \label{eq:ws}
+\end{equation}
+Onde:
+\begin{itemize}[leftmargin=1.25cm]
+  \item $W_s$: carga útil somada ao peso do moitão em $\si{\newton}$.
+  \item $W_u$: carga útil em $\si{\newton}$.
+  \item $G_{\text{moitão}}$: peso do moitão em $\si{\newton}$.
+\end{itemize}
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:ws}:
+\begin{align*}
+  W_s & = 100 \cdot 10^3 + 750   \\
+  W_s & = \SI{100,75e3}{\newton}
+\end{align*}
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:forca_de_tracao_no_cabo}:
+\begin{align*}
+  T & = \frac{100,75 \cdot 10^3}{4 \cdot 0,9925} \cdot 10^{-1} \\
+  T & = \boxed{\SI{2537,78}{\deca\newton}}
+\end{align*}
