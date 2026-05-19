@@ -10,6 +10,7 @@ Projeto em LaTeX para documentação completa do dimensionamento de um pórtico 
 - Durante a primeira compilação, o MiKTeX pode solicitar instalação de pacotes ausentes. Recomenda-se habilitar instalação automática de pacotes.
 
 Site oficial:
+
 - [https://miktex.org/download](https://miktex.org/download)
 
 ### 2) Formatação automática (obrigatório para formatar no editor)
@@ -43,14 +44,6 @@ C:\Strawberry\perl\bin\cpanm.bat YAML::Tiny File::HomeDir Unicode::GCString Log:
   - formatar com `latexindent` usando `perl.exe` + `latexindent.pl` do MiKTeX;
   - habilitar o LTeX em `pt-BR`, com dicionário inicial para termos técnicos do projeto.
 
-## Estrutura do projeto
-
-- `main.tex`: arquivo principal do documento.
-- `content/sections/`: capítulos e seções do memorial.
-- `content/references/`: PDFs de normas/catálogos e `referencias.bib`.
-- `assets/images/`: figuras utilizadas no documento.
-- `output/`: arquivos gerados na compilação (`.pdf`, `.aux`, `.log`, etc.).
-
 ## Como compilar
 
 No terminal, na raiz do projeto:
@@ -58,10 +51,6 @@ No terminal, na raiz do projeto:
 ```powershell
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
-
-## Compilação automática no editor
-
-Este projeto já está configurado para compilação automática no diretório correto.
 
 ## Revisão de texto e gramática (LTeX+)
 

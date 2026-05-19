@@ -24,9 +24,6 @@ output/pdf/
 output/latexindent/
 *.bak*
 
-# Binary documents
-*.pdf
-
 # Editor/project local files
 .DS_Store
 Thumbs.db
