@@ -52,7 +52,8 @@
     "pt-BR": [
       "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Dummy.*\"}",
       "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina.*\"}",
-      "{\"rule\":\"PARONYM_POLIA_522\",\"sentence\":\".*polia.*\"}"
+      "{\"rule\":\"PARONYM_POLIA_522\",\"sentence\":\".*polia.*\"}",
+      "{\"rule\":\"PT_BARBARISMS_REPLACE_SUITE\",\"sentence\":\".*Suite.*\"}"
     ]
   },
   "ltex.dictionary": {
@@ -68,7 +69,22 @@
       "moitão",
       "CIMAF",
       "Warrington",
-      "Seale"
+      "Seale",
+      "CMAA",
+      "EMH",
+      "Specification",
+      "Suite",
+      "NC",
+      "Solferina",
+      "Gosan",
+      "ASTM",
+      "Schedule",
+      "SEW",
+      "Eurodrive",
+      "Motoredutores",
+      "Gaiolli",
+      "SKF",
+      "WEG",
     ]
   },
   "ltex.latex.commands": {
