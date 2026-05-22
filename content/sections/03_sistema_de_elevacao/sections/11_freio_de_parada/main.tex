@@ -1,1 +1,49 @@
-Esta seção está em elaboração e será detalhada na versão final do memorial.
+O torque no eixo do motor é dado pela equação:
+
+\begin{equation}
+  T_{\text{motor}} = \frac{P_{\text{motor}}}{\omega_{\text{motor}}}
+  \label{eq:torque_motor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $T_{\text{motor}}$: torque no eixo do motor em $\si{\newton\meter}$.
+  \item $P_{\text{motor}}$: potência do motor em $\si{\watt}$.
+  \item $\omega_{\text{motor}}$: velocidade angular do motor em $\si{\radian/\second}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:torque_motor}:
+
+\begin{align*}
+  T_{\text{motor}} = \frac{11 \cdot 10^3}{1170 \cdot \frac{2 \cdot \pi}{60}} \\
+  T_{\text{motor}} = \boxed{\SI{89,78}{\newton\meter}}
+\end{align*}
+
+O torque do freio de parada é dado pela equação:
+
+\begin{equation}
+  T_f = T_{\text{motor}} \cdot 2
+  \label{eq:torque_freio}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $T_f$: torque do freio de parada em $\si{\newton\meter}$.
+  \item $T_{\text{motor}}$: torque no eixo do motor em $\si{\newton\meter}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:torque_freio}:
+
+\begin{align*}
+  T_f = 89,78 \cdot 2 \\
+  T_f = \boxed{\SI{179,56}{\newton\meter}}
+\end{align*}
+
+Com base no catálogo de freios de sapata da EMH \cite{emh_freios}, selecionou-se um freio de sapata com torque de $70$ a \SI{190}{\newton\meter}. As figuras e a tabela a seguir apresentam os dados extraídos do catálogo para o freio adotado.
+

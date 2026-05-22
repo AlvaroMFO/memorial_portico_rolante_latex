@@ -52,6 +52,12 @@ No terminal, na raiz do projeto:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
+Para compilar do zero (pode resolver alguns erros):
+
+```powershell
+latexmk -pdf -g -interaction=nonstopmode -halt-on-error main.tex
+```
+
 ## Revisão de texto e gramática (LTeX+)
 
 Necessário instalar a extensão **LTeX+**. [Página de Instalação do LTeX+](https://ltex-plus.github.io/ltex-plus/installation-usage.html#via-editor-extensions)
