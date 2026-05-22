@@ -1,1 +1,31 @@
-Esta seção está em elaboração e será detalhada na versão final do memorial.
+A força radial no eixo de saída do redutor é dada pela equação:
+
+\begin{equation}
+  F_{r_t} = \frac{G_{\text{tambor}} + G_{\text{cabo}}}{2} + T \cdot 10
+  \label{eq:carga_radial_no_eixo_de_saida_do_redutor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $F_{r_t}$: força radial no eixo de saída do redutor em $\si{\newton}$.
+  \item $G_{\text{tambor}}$: peso do tambor em $\si{\newton}$ \eqref{eq:peso_tambor}.
+  \item $G_{\text{cabo}}$: peso do cabo de aço em $\si{\newton}$ \eqref{eq:peso_cabo}.
+  \item $T$: força de tração no cabo em $\si{\deca\newton}$ \eqref{eq:forca_de_tracao_no_cabo}.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:carga_radial_no_eixo_de_saida_do_redutor}:
+
+\begin{align*}
+  F_{r_t} & = \frac{6611,85 + 978,48}{2} + 2537,78 \cdot 10 \\
+  F_{r_t} & = \boxed{\SI{29172,97}{\newton}}
+\end{align*}
+
+Verificando a força radial de saída admitida pelo redutor adotado:
+
+\begin{align*}
+  F_r                   & > F_{r_t}                                        \\
+  \SI{88}{\kilo\newton} & > \SI{29,17}{\kilo\newton} \rightarrow \text{OK}
+\end{align*}
