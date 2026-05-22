@@ -18,8 +18,8 @@ Onde:
 Substituindo os valores na equação \eqref{eq:torque_motor}:
 
 \begin{align*}
-  T_{\text{motor}} = \frac{11 \cdot 10^3}{1170 \cdot \frac{2 \cdot \pi}{60}} \\
-  T_{\text{motor}} = \boxed{\SI{89,78}{\newton\meter}}
+  T_{\text{motor}} & = \frac{11 \cdot 10^3}{1170 \cdot \frac{2 \cdot \pi}{60}} \\
+  T_{\text{motor}} & = \boxed{\SI{89,78}{\newton\meter}}
 \end{align*}
 
 O torque do freio de parada é dado pela equação:
@@ -41,29 +41,29 @@ Onde:
 Substituindo os valores na equação \eqref{eq:torque_freio}:
 
 \begin{align*}
-  T_f = 89,78 \cdot 2 \\
-  T_f = \boxed{\SI{179,56}{\newton\meter}}
+  T_f & = 89,78 \cdot 2                      \\
+  T_f & = \boxed{\SI{179,56}{\newton\meter}}
 \end{align*}
 
-Com base no catálogo de freios de sapata da EMH \cite{emh_freios}, selecionou-se um freio de sapata com torque de $70$ a \SI{190}{\newton\meter}. As figuras e a tabela a seguir apresentam os dados extraídos do catálogo para o freio adotado.
+Com base no catálogo de freios de sapata da EMH, selecionou-se um freio de sapata com torque de $70$ a \SI{190}{\newton\meter}. As figuras e a tabela a seguir apresentam os dados extraídos do catálogo para o freio adotado.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{content/sections/03_sistema_de_elevacao/sections/11_freio_de_parada/images/freio_catalogo.png}
-  \caption{Catálogo de freios de sapata da EMH \cite{emh_freios}}
+  \caption{Catálogo de freios de sapata \cite[p.~1]{emh_freios}}
   \label{fig:freio_catalogo}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{content/sections/03_sistema_de_elevacao/sections/11_freio_de_parada/images/freio_polia.png}
-  \caption{Dados da polia do freio adotado segundo o catálogo da EMH \cite{emh_freios}}
+  \caption{Dados da polia do freio adotado segundo o catálogo \cite[p.~6]{emh_freios}}
   \label{fig:freio_polia}
 \end{figure}
 
 \begin{table}[H]
   \centering
-  \caption{Dados do freio adotado segundo o catálogo da EMH \cite{emh_freios}}
+  \caption{Dados do freio adotado segundo o catálogo da EMH}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
     Descrição         & Símbolo            & Valor                   \\

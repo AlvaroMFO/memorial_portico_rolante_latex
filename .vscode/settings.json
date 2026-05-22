@@ -76,17 +76,19 @@
       "Suite",
       "NC",
       "Solferina",
-      "Gosan",
+      "GOSAN",
       "ASTM",
-      "Schedule",
+      "SCHEDULE",
       "SEW",
-      "Eurodrive",
+      "EURODRIVE",
       "Motoredutores",
       "Gaiolli",
       "SKF",
       "WEG",
       "Annestraße",
-      "BOHMER"
+      "BOHMER",
+      "DIN",
+      "CESTARI"
     ]
   },
   "ltex.latex.commands": {

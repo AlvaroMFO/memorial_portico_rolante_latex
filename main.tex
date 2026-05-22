@@ -59,15 +59,10 @@
 }
 \usepackage{csquotes}
 
-% Referencias bibliograficas
-\usepackage[
-  backend=biber,
-  style=numeric,
-  sorting=nyt
-]{biblatex}
-\addbibresource{content/references/referencias.bib}
-
 \usepackage{titlesec}
+
+% Referencias bibliograficas
+\usepackage[alf]{abntex2cite}
 
 \titleformat{\chapter}[hang]
   {\normalfont\huge\bfseries} % estilo
@@ -150,6 +145,7 @@
 \chapter{Trilhos e Rodas}
 \input{content/appendices/c_trilhos_e_rodas/main}
 
-\printbibliography[title={Referências}]
+\bibliographystyle{abntex2-alf}
+\bibliography{content/references/referencias}
 
 \end{document}

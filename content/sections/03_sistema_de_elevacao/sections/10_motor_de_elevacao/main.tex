@@ -34,13 +34,13 @@ Onde:
 
 \vspace{1em}
 
-Adotou-se $\eta_{\text{moitão}} = 0,9925$, conforme a equação \eqref{eq:rendimento_moitao}. Para o redutor, adotou-se $\eta_{\text{redutor}} = 0,94$, segundo o fabricante WEG Cestari \cite{weg_cestari_redutores}. Para os mancais, adotou-se $\eta_{\text{mancal}} = 0,985$.
+Adotou-se $\eta_{\text{moitão}} = 0,9925$, conforme a equação \eqref{eq:rendimento_moitao}. Para o redutor, adotou-se $\eta_{\text{redutor}} = 0,94$, segundo o fabricante WEG Cestari. Para os mancais, adotou-se $\eta_{\text{mancal}} = 0,985$.
 
 Substituindo os valores na equação \eqref{eq:rendimento_sistema}:
 
 \begin{align*}
   \eta_{\text{sistema}} & = 0,9925 \cdot 0,94 \cdot 0,985 \\
-  \eta_{\text{sistema}} & = 0,919
+  \eta_{\text{sistema}} & = \boxed{0,919}
 \end{align*}
 
 \vspace{1em}
@@ -56,25 +56,25 @@ Substituindo os valores na equação \eqref{eq:potencia_requerida}:
 
 \vspace{1em}
 
-Com base no catálogo de motores elétricos da WEG \cite{weg}, selecionou-se um motor trifásico à prova de explosão de \SI{11}{\kilo\watt} (\SI{15}{\cv}) e \SI{1170}{\rpm}, na carcaça 160L. As figuras e a tabela a seguir apresentam os dados extraídos do catálogo para o motor adotado.
+Com base no catálogo de motores elétricos da WEG, selecionou-se um motor trifásico à prova de explosão de \SI{11}{\kilo\watt} (\SI{15}{\cv}) e \SI{1170}{\rpm}, na carcaça 160L. As figuras e a tabela a seguir apresentam os dados extraídos do catálogo para o motor adotado.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/10_motor_de_elevacao/images/motor_catalogo.png}
-  \caption{Catálogo de motores elétricos da WEG \cite{weg}}
+  \caption{Catálogo de motores elétricos \cite[p.~B-10]{weg}}
   \label{fig:motor_catalogo}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/10_motor_de_elevacao/images/motor_dimensoes.png}
-  \caption{Dimensões do motor adotado segundo o catálogo da WEG \cite{weg}}
+  \caption{Dimensões do motor adotado segundo o catálogo \cite[p.~C-5]{weg}}
   \label{fig:motor_dimensoes}
 \end{figure}
 
 \begin{table}[H]
   \centering
-  \caption{Dados do motor adotado segundo o catálogo da WEG \cite{weg}}
+  \caption{Dados do motor adotado segundo o catálogo da WEG}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
     Descrição        & Símbolo            & Valor                 \\
