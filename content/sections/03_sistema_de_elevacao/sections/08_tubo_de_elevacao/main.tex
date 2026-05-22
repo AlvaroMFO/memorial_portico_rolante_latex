@@ -1,4 +1,4 @@
-A espessura do tambor é dada pela equação:
+A espessura mínima da parede do tambor é dada pela equação:
 
 \begin{equation}
   e_t = h + h_1 + \text{Sobremetal}
@@ -8,10 +8,43 @@ A espessura do tambor é dada pela equação:
 Onde:
 
 \begin{itemize}[leftmargin=1.25cm]
-  \item $e_t$: espessura do tambor em $\si{\milli\meter}$.
+  \item $e_t$: espessura mínima da parede do tambor em $\si{\milli\meter}$.
   \item $h$: profundidade da ranhura em $\si{\milli\meter}$.
-  \item $h_1$: espessura descontando a ranhura em $\si{\milli\meter}$.
-  \item $\text{Sobremetal}$: adota-se de $2$ a \SI{3}{\milli\meter}.
+  \item $h_1$: espessura remanescente sob a ranhura em $\si{\milli\meter}$.
+  \item $\text{Sobremetal}$: acréscimo previsto para usinagem, adotado entre \SI{2}{\milli\meter} e \SI{3}{\milli\meter}.
 \end{itemize}
 
-Consultando o material auxiliar de Projeto Preliminar
+\vspace{1em}
+
+A partir da tabela de dimensões do tambor apresentada no Projeto Preliminar (Figura \ref{fig:dim_tambor}), para o diâmetro do cabo $d_c = \SI{19}{\milli\meter}$, adotou-se $h_1 = \SI{10}{\milli\meter}$.
+
+Substituindo os valores na equação \eqref{eq:espessura_do_tambor}:
+
+\begin{align*}
+  e_t & = 7,5 + 10 + 3            \\
+  e_t & = \SI{20,5}{\milli\meter}
+\end{align*}
+
+Com base no catálogo da Schedule \cite{schedule_tubos}, selecionou-se um tubo comercial com diâmetro externo de \SI{355,6}{\milli\meter} e espessura de \SI{23,83}{\milli\meter}. Essa espessura é superior ao valor mínimo calculado, atendendo ao requisito de projeto para a parede do tambor.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{content/sections/03_sistema_de_elevacao/sections/08_tubo_de_elevacao/images/tubos_catalogo.png}
+  \caption{Catálogo de tubos da Schedule \cite{schedule_tubos}}
+  \label{fig:tubos_catalogo}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \caption{Dados do tambor adotado segundo o catálogo da Schedule \cite{schedule_tubos}}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Descrição                 & Símbolo           & Valor                          \\
+    \midrule
+    Diâmetro externo          & $D_t$             & \SI{355,6}{\milli\meter}       \\
+    Diâmetro interno          & $D_i$             & \SI{307,94}{\milli\meter}      \\
+    Espessura                 & $e_t$             & \SI{23,83}{\milli\meter}       \\
+    Massa do tambor por metro & $m_{\text{tubo}}$ & \SI{194,64}{\kilo\gram/\meter} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
