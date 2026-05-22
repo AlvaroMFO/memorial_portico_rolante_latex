@@ -1,1 +1,97 @@
-Esta seção está em elaboração e será detalhada na versão final do memorial.
+A massa do tubo é dada pela equação:
+
+\begin{equation}
+  M_{\text{tubo}} = L_t \cdot m_{\text{tubo}}
+  \label{eq:massa_tubo}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $M_{\text{tubo}}$: massa do tubo em $\si{\kilo\gram}$.
+  \item $L_t$: comprimento do tambor, convertido para $\si{\meter}$.
+  \item $m_{\text{tubo}}$: massa do tubo por metro em $\si{\kilo\gram/\meter}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:massa_tubo}:
+
+\begin{align*}
+  M_{\text{tubo}} & = 2112 \cdot 10^{-3} \cdot 194,64 \\
+  M_{\text{tubo}} & = \SI{411,08}{\kilo\gram}
+\end{align*}
+
+A área do flange é dada pela equação:
+
+\begin{equation}
+  A_f = \frac{\pi \cdot {D_t}^2}{4}
+  \label{eq:area_flange}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $A_f$: área de cada flange em $\si{\meter^2}$.
+  \item $D_t$: diâmetro externo do tubo, convertido para $\si{\meter}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:area_flange}:
+
+\begin{align*}
+  A_f & = \frac{\pi \cdot {\left(355,6 \cdot 10^{-3}\right)}^2}{4} \\
+  A_f & = \SI{99,32e-3}{\meter^2}
+\end{align*}
+
+A massa do flange é dada pela equação:
+
+\begin{equation}
+  M_{\text{chapa}} = 3 \cdot A_f \cdot m_{\text{chapa}}
+  \label{eq:massa_flange}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $M_{\text{chapa}}$: massa total das chapas dos flanges em $\si{\kilo\gram}$.
+  \item $A_f$: área de cada flange em $\si{\meter^2}$.
+  \item $m_{\text{chapa}}$: massa da chapa por metro quadrado em $\si{\kilo\gram/\meter^2}$.
+\end{itemize}
+
+\vspace{1em}
+
+Com base na tabela de propriedades do aço ASTM A36 (Figura \ref{fig:chapas_astm_a36_sae_1045}), adotou-se uma chapa de \SI{12,7}{\milli\meter} de espessura, cuja massa por metro quadrado é \SI{99,7}{\kilo\gram/\meter^2}.
+
+Substituindo os valores na equação \eqref{eq:massa_flange}:
+
+\begin{align*}
+  M_{\text{chapa}} & = 3 \cdot 99,32 \cdot 10^{-3} \cdot 99,7 \\
+  M_{\text{chapa}} & = \SI{29,71}{\kilo\gram}
+\end{align*}
+
+O peso do tambor é dado pela equação:
+
+\begin{equation}
+  G_{\text{tambor}} = \left(M_{\text{tubo}} + M_{\text{chapa}}\right) \cdot g \cdot 1,5
+  \label{eq:peso_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $G_{\text{tambor}}$: peso do tambor em $\si{\newton}$.
+  \item $M_{\text{tubo}}$: massa do tubo em $\si{\kilo\gram}$.
+  \item $M_{\text{chapa}}$: massa total das chapas dos flanges em $\si{\kilo\gram}$.
+  \item $g$: aceleração da gravidade em $\si{\meter/\second^2}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:peso_tambor}:
+
+\begin{align*}
+  G_{\text{tambor}} & = \left(411,08 + 29,71\right) \cdot 10 \cdot 1,5 \\
+  G_{\text{tambor}} & = \boxed{\SI{6611,85}{\newton}}
+\end{align*}
