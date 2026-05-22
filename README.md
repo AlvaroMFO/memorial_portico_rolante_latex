@@ -58,6 +58,8 @@ Para compilar do zero (pode resolver alguns erros):
 latexmk -pdf -g -interaction=nonstopmode -halt-on-error main.tex
 ```
 
+Também é possível excluir a pasta `output` e a compilação será feita do zero na próxima execução.
+
 ## Revisão de texto e gramática (LTeX+)
 
 Necessário instalar a extensão **LTeX+**. [Página de Instalação do LTeX+](https://ltex-plus.github.io/ltex-plus/installation-usage.html#via-editor-extensions)
