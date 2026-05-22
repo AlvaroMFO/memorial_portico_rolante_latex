@@ -1,1 +1,76 @@
-Esta seção está em elaboração e será detalhada na versão final do memorial.
+A redução necessária é dada pela equação:
+
+\begin{equation}
+  I_{\text{nec}} = \frac{n_{\text{motor}}}{n_{\text{tambor}}}
+  \label{eq:reducao_necessaria}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $I_{\text{nec}}$: redução necessária.
+  \item $n_{\text{motor}}$: rotação do motor em $\si{\rpm}$.
+  \item $n_{\text{tambor}}$: rotação do tambor em $\si{\rpm}$.
+\end{itemize}
+
+\vspace{1em}
+
+A velocidade do cabo é dada pela equação:
+
+\begin{equation}
+  V_{\text{cabo}} = \frac{n_c}{2} \cdot V_L
+  \label{eq:velocidade_do_cabo}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $V_{\text{cabo}}$: velocidade do cabo em $\si{\meter/\second}$.
+  \item $n_c$: número de cabos.
+  \item $V_L$: velocidade de elevação em $\si{\meter/\second}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:velocidade_do_cabo}:
+
+\begin{align*}
+  V_{\text{cabo}} = \frac{4}{2} \cdot 0,1 \\
+  V_{\text{cabo}} = \boxed{\SI{0,2}{\meter/\second}}
+\end{align*}
+
+A velocidade angular do tambor é dada pela equação:
+
+\begin{equation}
+  \omega_{\text{tambor}} = \frac{V_{\text{cabo}}}{R_t}
+  \label{eq:velocidade_angular_do_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}[leftmargin=1.25cm]
+  \item $\omega_{\text{tambor}}$: velocidade angular do tambor em $\si{\radian/\second}$.
+  \item $V_{\text{cabo}}$: velocidade do cabo em $\si{\meter/\second}$.
+  \item $R_t$: raio do tambor em $\si{\meter}$.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:velocidade_angular_do_tambor}:
+
+\begin{align*}
+  \omega_{\text{tambor}} = \frac{0,2}{\frac{355,6}{2} \cdot 10^{-3}} \\
+  \omega_{\text{tambor}} = \boxed{\SI{1,13}{\radian/\second}}
+\end{align*}
+
+\begin{align*}
+  n_{\text{tambor}} = \frac{60}{2 \pi} \cdot 1,13 \\
+  n_{\text{tambor}} = \boxed{\SI{10,79}{\rpm}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:reducao_necessaria}:
+
+\begin{align*}
+  I_{\text{nec}} = \frac{1170}{10,79} \\
+  I_{\text{nec}} = \boxed{108,43}
+\end{align*}
