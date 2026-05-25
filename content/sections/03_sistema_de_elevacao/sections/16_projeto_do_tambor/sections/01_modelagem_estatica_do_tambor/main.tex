@@ -91,27 +91,73 @@ Com base nas cargas e distâncias consideradas, o diagrama de corpo livre do tam
 
 Utilizando as equações de equilíbrio, as reações de apoio podem ser calculadas.
 
-\begin{align*}
-  \sum M_A    & = 0                              \\
-  - \frac{2,212}{2} \cdot 3431,43 \cdot 2,212    \\
-  - 1,056 \cdot 25377,8                          \\
-  - 1,256 \cdot 25377,8                          \\
-  - 2,212 \cdot 540                              \\
-  + 2,212 R_B & = 0                              \\
-  R_B         & = \frac{-68262,85}{2,212}        \\
-  R_B         & = \boxed{\SI{30860,24}{\newton}}
-\end{align*}
+Os momentos atuantes no ponto A são:
+
+\begin{equation*}
+  2,212 \cdot R_B
+\end{equation*}
+
+\begin{equation*}
+  - 3431,43 \cdot \frac{2,212}{2} \cdot 2,212 = \SI{-8394,9}{\newton\meter}
+\end{equation*}
+
+\begin{equation*}
+  - 1,056 \cdot 25377,8 = \SI{-26798,96}{\newton\meter}
+\end{equation*}
+
+\begin{equation*}
+  - 1,256 \cdot 25377,8 = \SI{-31874,52}{\newton\meter}
+\end{equation*}
+
+\begin{equation*}
+  - 2,212 \cdot 540 = \SI{-1194,48}{\newton\meter}
+\end{equation*}
+
+\vspace{1em}
+
+Aplicando nas equações de equilíbrio, temos:
+
+\begin{flalign*}
+   & \sum M_A = 0                                           &  & \\
+   & 2,212 R_B - 8394,9 - 26798,96 - 31874,52 - 1194,48 = 0 &  &
+\end{flalign*}
+
+\begin{equation}
+  2,212 R_B - 68262,86 = 0
+  \label{eq:sum_ma_tambor}
+\end{equation}
+
+\vspace{1em}
+
+\begin{flalign*}
+   & \sum F_y = 0                                                &  & \\
+   & R_A + R_B - 3431,43 \cdot 2,212 - 2 \cdot 25377,8 - 540 = 0 &  &
+\end{flalign*}
+
+\begin{equation}
+  R_A + R_B - 58885,92 = 0
+  \label{eq:sum_fy_tambor}
+\end{equation}
+
+\vspace{1em}
+
+Desenvolvendo a equação \eqref{eq:sum_ma_tambor}, temos:
 
 \begin{align*}
-  \sum F_y  & = 0                              \\
-  R_A + R_B                                    \\
-  - 3431,43 \cdot 2,212                        \\
-  - 2 \cdot 25377,8                            \\
-  - 540     & = 0                              \\
-  R_A + R_B & = 58885,92                       \\
-  R_A       & = 58885,92 - 30860,24            \\
-  R_A       & = \boxed{\SI{28025,68}{\newton}}
+  R_B & = \frac{68262,86}{2,212}         \\
+  R_B & = \boxed{\SI{30860,24}{\newton}}
 \end{align*}
+
+\vspace{1em}
+
+Substituindo o valor de $R_B$ na equação \eqref{eq:sum_fy_tambor}, temos:
+
+\begin{align*}
+  R_A & = 58885,92 - 30860,24            \\
+  R_A & = \boxed{\SI{28025,68}{\newton}}
+\end{align*}
+
+\vspace{1em}
 
 \subsubsection{Funções de Singularidade}
 
