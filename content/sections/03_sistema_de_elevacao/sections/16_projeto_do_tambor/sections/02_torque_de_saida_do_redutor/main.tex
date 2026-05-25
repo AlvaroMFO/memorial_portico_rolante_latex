@@ -1,0 +1,23 @@
+O torque de saída do redutor é dado pela equação:
+
+\begin{equation}
+  T_s = \frac{P_{\text{motor}}}{\omega_{\text{tambor}}} \cdot \eta_{\text{redutor}}
+  \label{eq:torque_saida_redutor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $P_{\text{motor}}$: potência do motor em \si{\watt} (Tabela \ref{tab:dados_motor_adotado});
+  \item $\omega_{\text{tambor}}$: velocidade angular do tambor em \si{\radian\per\second} \eqref{eq:velocidade_angular_do_tambor};
+  \item $\eta_{\text{redutor}}$: rendimento do redutor (Tabela \ref{tab:dados_redutor_adotado}).
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:torque_saida_redutor}:
+
+\begin{align*}
+  T_s & = \frac{11 \cdot 10^3}{1,13} \cdot 0,94 \\
+  T_s & = \boxed{\SI{9150,44}{\newton\meter}}
+\end{align*}

@@ -25,9 +25,9 @@ A velocidade do cabo é dada pela equação:
 Onde:
 
 \begin{itemize}[leftmargin=1.25cm]
-  \item $V_{\text{cabo}}$: velocidade do cabo em $\si{\meter/\second}$.
+  \item $V_{\text{cabo}}$: velocidade do cabo em $\si{\meter\per\second}$.
   \item $n_c$: número de cabos (Tabela \ref{tab:nc_mmoitao}).
-  \item $V_L$: velocidade de elevação em $\si{\meter/\second}$ (Figura \ref{fig:velocidades}).
+  \item $V_L$: velocidade de elevação em $\si{\meter\per\second}$ (Figura \ref{fig:velocidades}).
 \end{itemize}
 
 \vspace{1em}
@@ -35,8 +35,8 @@ Onde:
 Substituindo os valores na equação \eqref{eq:velocidade_do_cabo}:
 
 \begin{align*}
-  V_{\text{cabo}} & = \frac{4}{2} \cdot 0,1            \\
-  V_{\text{cabo}} & = \boxed{\SI{0,2}{\meter/\second}}
+  V_{\text{cabo}} & = \frac{4}{2} \cdot 0,1               \\
+  V_{\text{cabo}} & = \boxed{\SI{0,2}{\meter\per\second}}
 \end{align*}
 
 A velocidade angular do tambor é dada pela equação:
@@ -49,8 +49,8 @@ A velocidade angular do tambor é dada pela equação:
 Onde:
 
 \begin{itemize}[leftmargin=1.25cm]
-  \item $\omega_{\text{tambor}}$: velocidade angular do tambor em $\si{\radian/\second}$.
-  \item $V_{\text{cabo}}$: velocidade do cabo em $\si{\meter/\second}$.
+  \item $\omega_{\text{tambor}}$: velocidade angular do tambor em $\si{\radian\per\second}$.
+  \item $V_{\text{cabo}}$: velocidade do cabo em $\si{\meter\per\second}$.
   \item $R_t$: raio do tambor em $\si{\meter}$ (Tabela \ref{tab:dados_do_tambor_adotado}).
 \end{itemize}
 
@@ -60,7 +60,7 @@ Substituindo os valores na equação \eqref{eq:velocidade_angular_do_tambor}:
 
 \begin{align*}
   \omega_{\text{tambor}} & = \frac{0,2}{\frac{355,6}{2} \cdot 10^{-3}} \\
-  \omega_{\text{tambor}} & = \boxed{\SI{1,13}{\radian/\second}}
+  \omega_{\text{tambor}} & = \boxed{\SI{1,13}{\radian\per\second}}
 \end{align*}
 
 \begin{align*}
@@ -154,18 +154,19 @@ Com base no catálogo de redutores da WEG Cestari, selecionou-se um redutor para
   \label{tab:dados_redutor_adotado}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
-    Descrição                     & Símbolo              & Valor                       \\
+    Descrição                     & Símbolo                 & Valor                       \\
     \midrule
-    Relação de transmissão        & $i_N$                & 112                         \\
-    Rotação de entrada            & $n_1$                & \SI{1200}{\rpm}             \\
-    Rotação de saída              & $n_2$                & \SI{10}{\rpm}               \\
-    Torque de saída               & $M_2$                & \SI{28}{\kilo\newton\meter} \\
-    Potência                      & $P_{\text{redutor}}$ & \SI{32}{\kilo\watt}         \\
-    Potência térmica (posição P1) & $P_{T_G}$            & \SI{75}{\kilo\watt}         \\
-    Diâmetro do eixo de entrada   & $\varnothing DE$     & \SI{60}{\milli\meter}       \\
-    Diâmetro do eixo de saída     & $\varnothing DS$     & \SI{130}{\milli\meter}      \\
-    Massa                         & $M_{\text{redutor}}$ & \SI{552}{\kilo\gram}        \\
-    Força radial de saída         & $F_r$                & \SI{88}{\kilo\newton}       \\
+    Relação de transmissão        & $i_N$                   & 112                         \\
+    Rotação de entrada            & $n_1$                   & \SI{1200}{\rpm}             \\
+    Rotação de saída              & $n_2$                   & \SI{10}{\rpm}               \\
+    Torque de saída               & $M_2$                   & \SI{28}{\kilo\newton\meter} \\
+    Potência                      & $P_{\text{redutor}}$    & \SI{32}{\kilo\watt}         \\
+    Potência térmica (posição P1) & $P_{T_G}$               & \SI{75}{\kilo\watt}         \\
+    Diâmetro do eixo de entrada   & $\varnothing DE$        & \SI{60}{\milli\meter}       \\
+    Diâmetro do eixo de saída     & $\varnothing DS$        & \SI{130}{\milli\meter}      \\
+    Massa                         & $M_{\text{redutor}}$    & \SI{552}{\kilo\gram}        \\
+    Força radial de saída         & $F_r$                   & \SI{88}{\kilo\newton}       \\
+    Rendimento                    & $\eta_{\text{redutor}}$ & 0,94                        \\
     \bottomrule
   \end{tabularx}
 \end{table}
