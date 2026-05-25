@@ -1,9 +1,195 @@
 As dimensões principais do tambor são representadas no esquema abaixo:
 
-% TODO: figura do desenho do tambor
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/drawings/desenho_tambor.pdf}
+  \caption{Representação das dimensões principais do tambor (Autor)}
+  \label{fig:desenho_tambor}
+\end{figure}
+
+\begin{itemize}
+  \item $D_t$: diâmetro primitivo.
+  \item $D_u$: diâmetro usinado.
+  \item $D_n$: diâmetro nominal.
+  \item $D_f$: diâmetro do flange.
+  \item $e_{\text{usinado}}$: espessura usinada do tambor.
+  \item $D_i$: diâmetro interno (Tabela \ref{tab:dados_do_tambor_adotado}).
+  \item $D_e$: diâmetro externo (Tabela \ref{tab:dados_do_tambor_adotado}).
+  \item $e_{\text{tubo}}$: espessura do tubo (Tabela \ref{tab:dados_do_tambor_adotado}).
+  \item $R$: raio da ranhura (Tabela \ref{tab:dimensoes_ranhuras}).
+  \item $h$: altura da ranhura (Tabela \ref{tab:dimensoes_ranhuras}).
+  \item $h_1$: espessura remanescente sob a ranhura (Figura \ref{fig:dim_tambor}).
+  \item $L_1$: comprimento entre o fim das ranhuras e a extremidade do tambor ($\SI{200}{\milli\meter}$).
+\end{itemize}
+
+\vspace{1em}
+
+O diâmetro nominal é dado por:
+
+\begin{equation}
+  D_n = D_i + 2 h_1
+  \label{eq:diametro_nominal}
+\end{equation}
 
 \begin{align*}
-  D_n & = D_i + 2 h_1 = 307
+  D_n & = 307,94 + 2 \cdot 10               \\
+  D_n & = \boxed{\SI{327,94}{\milli\meter}}
+\end{align*}
+
+O diâmetro primitivo é dado por:
+
+\begin{equation}
+  D_t = D_n + 2 R
+  \label{eq:diametro_primitivo}
+\end{equation}
+
+\begin{align*}
+  D_t & = 327,94 + 2 \cdot 10               \\
+  D_t & = \boxed{\SI{347,94}{\milli\meter}}
+\end{align*}
+
+O diâmetro usinado é dado por:
+
+\begin{equation}
+  D_u = D_n + 2 h
+  \label{eq:diametro_usinado}
+\end{equation}
+
+\begin{align*}
+  D_u & = 327,94 + 2 \cdot 7,5              \\
+  D_u & = \boxed{\SI{342,94}{\milli\meter}}
+\end{align*}
+
+O diâmetro do flange é dado por:
+
+\begin{equation}
+  D_f = D_e + 3 d_{\text{cabo}}
+  \label{eq:diametro_flange}
+\end{equation}
+
+\begin{align*}
+  D_f & = 355,6 + 3 \cdot 19               \\
+  D_f & = \boxed{\SI{412,6}{\milli\meter}}
+\end{align*}
+
+A espessura usinada do tambor é dada por:
+
+\begin{equation}
+  e_{\text{usinado}} = \frac{D_e - D_t}{2} + R
+  \label{eq:espessura_usinada}
+\end{equation}
+
+\begin{align*}
+  e_{\text{usinado}} & = \frac{355,6 - 347,94}{2} + 10    \\
+  e_{\text{usinado}} & = \boxed{\SI{13,83}{\milli\meter}}
+\end{align*}
+
+Com base nas Propriedades dos Materiais, as tensões admissíveis do aço A572 Grau 42 (Figura \ref{fig:tensoes_admissiveis_aco_a572}), utilizado para a fabricação do tambor, são:
+
+\begin{table}[H]
+  \centering
+  \caption{Tensões admissíveis do tambor}
+  \label{tab:tensoes_tambor}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Descrição             & Símbolo    & Valor                  \\
+    \midrule
+    Tensão de escoamento  & $\sigma_e$ & \SI{290}{\mega\pascal} \\
+    Tensão de resistência & $\sigma_R$ & \SI{415}{\mega\pascal} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+A tensão de flexão admissível do tambor é dada pela equação:
+
+\begin{equation}
+  \sigma_{\text{adm}} = \frac{\sigma_R}{q \cdot FS_r}
+  \label{eq:tensao_admissivel_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $\sigma_R$: tensão de resistência.
+  \item $q$: coeficiente segundo a norma NBR 8400 \cite{nbr8400}.
+  \item $FS_r$: coeficiente segundo a norma NBR 8400 \cite{nbr8400}.
+\end{itemize}
+
+\vspace{1em}
+
+Consultando as tabelas 24 e 25 da norma NBR 8400 \cite{nbr8400}, temos:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/images/q_tambor.png}
+  \caption{Coeficiente $q$ segundo a norma NBR 8400 \cite{nbr8400}}
+  \label{fig:q_tambor}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/images/fsr_tambor.png}
+  \caption{Coeficiente $FS_r$ segundo a norma NBR 8400 \cite{nbr8400}}
+  \label{fig:fsr_tambor}
+\end{figure}
+
+O grupo do mecanismo é 1AM e o caso de solicitação é II, definidos nos Dados de Entrada do Projeto (Seção \ref{sec:dados_de_entrada_do_projeto}). Portanto, temos:
+
+\begin{table}[H]
+  \centering
+  \caption{Dados obtidos}
+  \label{tab:q_fsr_tambor}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Descrição          & Símbolo & Valor \\
+    \midrule
+    Coeficiente $q$    & $q$     & 1     \\
+    Coeficiente $FS_r$ & $FS_r$  & 2,8   \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+A tensão de cisalhamento admissível do tambor é dada pela equação:
+
+\begin{equation}
+  \tau_{\text{adm}} = \frac{\sigma_{\text{adm}}}{\sqrt{3}}
+  \label{eq:tensao_cisalhamento_admissivel_tambor}
+\end{equation}
+
+O comprimento total do tambor é dado pela equação:
+
+\begin{equation}
+  L_{\text{total}} = L_t + L_R
+  \label{eq:comprimento_total_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $L_t$: comprimento do tambor em \si{\milli\meter} \eqref{eq:comprimento_do_tambor}.
+  \item $L_R$: distância entre a extremidade do tambor e a ponta do eixo (\SI{100}{\milli\meter}).
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:tensao_admissivel_tambor}:
+
+\begin{align*}
+  \sigma_{\text{adm}} & = \frac{415}{1 \cdot 2,8}           \\
+  \sigma_{\text{adm}} & = \boxed{\SI{148,21}{\mega\pascal}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_admissivel_tambor}:
+
+\begin{align*}
+  \tau_{\text{adm}} & = \frac{148,21}{\sqrt{3}}          \\
+  \tau_{\text{adm}} & = \boxed{\SI{85,57}{\mega\pascal}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:comprimento_total_tambor}:
+
+\begin{align*}
+  L_{\text{total}} & = 2112 + 100                      \\
+  L_{\text{total}} & = \boxed{\SI{2212}{\milli\meter}}
 \end{align*}
 
 \subsection{Modelagem estática do tambor}
