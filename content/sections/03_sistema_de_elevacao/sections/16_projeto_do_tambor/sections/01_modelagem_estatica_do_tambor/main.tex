@@ -76,7 +76,7 @@ As distâncias consideradas na modelagem estática são:
   \end{tabularx}
 \end{table}
 
-\subsubsection{Diagrama de Corpo Livre}
+\subsubsection{Diagrama de corpo livre}
 
 Com base nas cargas e distâncias consideradas, o diagrama de corpo livre do tambor é ilustrado abaixo:
 
@@ -87,7 +87,7 @@ Com base nas cargas e distâncias consideradas, o diagrama de corpo livre do tam
   \label{fig:dcl_tambor}
 \end{figure}
 
-\subsubsection{Reações de Apoio}
+\subsubsection{Reações de apoio}
 
 Utilizando as equações de equilíbrio, as reações de apoio podem ser calculadas.
 
@@ -159,12 +159,69 @@ Substituindo o valor de $R_B$ na equação \eqref{eq:sum_fy_tambor}, temos:
 
 \vspace{1em}
 
-\subsubsection{Funções de Singularidade}
+\subsubsection{Funções de singularidade}
 
 Para obter as equações dos esforços internos de força cortante e momento fletor, utilizou-se o método das funções de singularidade de Macaulay.
 
 \begin{align*}
-  V(x) & = -3431,43 \left<x\right>^1              \\
-       & \quad + 28025,68 \left<x\right>^0        \\
-       & \quad - 25377,8 \left<x - 1,056\right>^0
+  V(x) & = -3431,43 \left<x\right>^1 + 28025,68 \left<x\right>^0 - 25377,8 \left<x - 1,056\right>^0 \rightarrow                                  \\
+       & \quad - 25377,8 \left<x - 1,256\right>^0 - 540 \left<x - 2,212\right>^0 - 30860,24 \left<x - 2,212\right>^0 \left[ \si{\newton} \right]
 \end{align*}
+
+\begin{align*}
+  M(x) & = -\frac{3431,43}{2} \left<x\right>^2 + 28025,68 \left<x\right>^1 - 25377,8 \left<x - 1,056\right>^1 \rightarrow                              \\
+       & \quad - 25377,8 \left<x - 1,256\right>^1 - 540 \left<x - 2,212\right>^1 - 30860,24 \left<x - 2,212\right>^1 \left[ \si{\newton\meter} \right]
+\end{align*}
+
+Desenvolvendo as funções de singularidade, podemos extrair as equações para cada segmento da viga:
+
+\[
+  V(x) =
+  \begin{cases}
+    -3431,43 x + 28025,68 & 0 \le x \le \SI{1,056}{\meter}                  \\
+    -3431,43 x + 2647,88  & \SI{1,056}{\meter} \le x \le \SI{1,256}{\meter} \\
+    -3431,43 x - 22729,92 & \SI{1,256}{\meter} \le x \le \SI{2,212}{\meter}
+  \end{cases}
+  \quad \left[ \si{\newton} \right]
+\]
+
+\[
+  M(x) =
+  \begin{cases}
+    -1715,72 x^2 + 28025,68 x            & 0 \le x \le \SI{1,056}{\meter}                  \\
+    -1715,72 x^2 + 2647,88 x + 26798,96  & \SI{1,056}{\meter} \le x \le \SI{1,256}{\meter} \\
+    -1715,72 x^2 - 22729,92 x + 58673,47 & \SI{1,256}{\meter} \le x \le \SI{2,212}{\meter}
+  \end{cases}
+  \quad \left[ \si{\newton\meter} \right]
+\]
+
+\subsubsection{Diagramas de esforço cortante e momento fletor}
+
+Aplicando as equações obtidas nos pontos da viga, temos o seguinte diagrama de esforços internos:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/diagrama_tambor.pdf}
+  \caption{Diagrama de esforços internos do tambor (Autor)}
+  \label{fig:diagrama_tambor}
+\end{figure}
+
+Analisando o diagrama, temos que o momento fletor máximo no tambor ocorre na posição $x = \SI{1,056}{\meter}$ e a força cortante máxima no tambor ocorre na posição $x = \SI{2,212}{\meter}$.
+
+Assim, podemos extrair os valores de momento fletor máximo e a força cortante máxima no tambor e também o momento fletor e a força cortante no eixo. Os dados obtidos são:
+
+\begin{table}[H]
+  \centering
+  \caption{Dados de esforços internos do tambor}
+  \label{tab:dados_esforcos_tambor}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Descrição                        & Símbolo   & Valor                        \\
+    \midrule
+    Momento fletor máximo no tambor  & $M_{f_t}$ & \SI{27681,86}{\newton\meter} \\
+    Força cortante máxima no tambor  & $V_t$     & \SI{30320,24}{\newton}       \\
+    Momento fletor no eixo do tambor & $M_{f_e}$ & \SI{2785,41}{\newton\meter}  \\
+    Força cortante no eixo do tambor & $V_e$     & \SI{27682,54}{\newton}       \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
