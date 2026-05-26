@@ -1,5 +1,6 @@
 {
   "latex-workshop.latex.outDir": "%DIR%/output/pdf",
+  "latex-workshop.latex.jobname": "memorial_portico_rolante",
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.latex.tools": [
     {

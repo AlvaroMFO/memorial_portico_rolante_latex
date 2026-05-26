@@ -10,6 +10,7 @@ A tensão de flexão é dada pela equação:
 Onde:
 
 \begin{itemize}
+  \item $\sigma_f$: tensão de flexão no tambor em \si{\mega\pascal}.
   \item $M_{f_t}$: momento fletor máximo no tambor em \si{\newton\meter} (Tabela \ref{tab:dados_esforcos_tambor}).
   \item $W_{f_t}$: módulo de resistência à flexão do tambor em \si{\meter\cubed}.
 \end{itemize}
@@ -26,6 +27,7 @@ O módulo de resistência à flexão do tambor é dado pela equação:
 Onde:
 
 \begin{itemize}
+  \item $W_{f_t}$: módulo de resistência à flexão do tambor em \si{\meter\cubed}.
   \item $D_u$: diâmetro usinado do tambor em \si{\meter} \eqref{eq:diametro_usinado}.
   \item $D_i$: diâmetro interno do tambor em \si{\meter} (Tabela \ref{tab:dados_do_tambor_adotado}).
 \end{itemize}
@@ -51,13 +53,14 @@ Substituindo os valores na equação \eqref{eq:tensao_flexao_tambor}:
 A tensão de cisalhamento por torção é dada pela equação:
 
 \begin{equation}
-  \tau_t = \frac{T_s}{W_{T_t}}
+  \tau_T = \frac{T_s}{W_{T_t}}
   \label{eq:tensao_cisalhamento_torcao_tambor}
 \end{equation}
 
 Onde:
 
 \begin{itemize}
+  \item $\tau_T$: tensão de cisalhamento por torção no tambor em \si{\mega\pascal}.
   \item $T_s$: torque de saída do redutor em \si{\newton\meter} \eqref{eq:torque_saida_redutor}.
   \item $W_{T_t}$: módulo de resistência à torção do tambor em \si{\meter\cubed}.
 \end{itemize}
@@ -74,6 +77,7 @@ O módulo de resistência à torção do tambor é dado pela equação:
 Onde:
 
 \begin{itemize}
+  \item $W_{T_t}$: módulo de resistência à torção do tambor em \si{\meter\cubed}.
   \item $D_u$: diâmetro usinado do tambor em \si{\meter} \eqref{eq:diametro_usinado}.
   \item $D_i$: diâmetro interno do tambor em \si{\meter} (Tabela \ref{tab:dados_do_tambor_adotado}).
 \end{itemize}
@@ -90,8 +94,88 @@ Substituindo os valores na equação \eqref{eq:modulo_resistencia_torcao_tambor}
 Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_torcao_tambor}:
 
 \begin{align*}
-  \tau_t & = \frac{9150,44}{2,77 \cdot 10^{-3}} \\
-  \tau_t & = \boxed{\SI{3,3}{\mega\pascal}}
+  \tau_T & = \frac{9150,44}{2,77 \cdot 10^{-3}} \\
+  \tau_T & = \boxed{\SI{3,3}{\mega\pascal}}
 \end{align*}
 
 \subsubsection{Cisalhamento}
+
+A tensão de cisalhamento cortante é dada pela equação:
+
+\begin{equation}
+  \tau_V = \frac{4}{3} \frac{V_t}{A_m}
+  \label{eq:tensao_cisalhamento_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $\tau_V$: tensão de cisalhamento cortante no tambor em \si{\mega\pascal}.
+  \item $V_t$: força cortante máxima no tambor em \si{\newton}.
+  \item $A_m$: área da seção transversal do tambor em \si{\meter\squared}.
+\end{itemize}
+
+\vspace{1em}
+
+A área da seção transversal do tambor é dada pela equação:
+
+\begin{equation}
+  A_m = \frac{\pi \left( {D_u}^2 - {D_i}^2 \right)}{4}
+  \label{eq:area_secao_transversal_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $A_m$: área da seção transversal do tambor em \si{\meter\squared}.
+  \item $D_u$: diâmetro usinado do tambor em \si{\meter} \eqref{eq:diametro_usinado}.
+  \item $D_i$: diâmetro interno do tambor em \si{\meter} (Tabela \ref{tab:dados_do_tambor_adotado}).
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:area_secao_transversal_tambor}:
+
+\begin{align*}
+  A_m & = \frac{\pi \left( 0,34294^2 - 0,30794^2 \right)}{4} \\
+  A_m & = \boxed{\SI{17,89e-3}{\meter\squared}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_tambor}:
+
+\begin{align*}
+  \tau_V & = \frac{4}{3} \frac{30320,2}{17,89 \cdot 10^{-3}} \\
+  \tau_V & = \boxed{\SI{2,26}{\mega\pascal}}
+\end{align*}
+
+\subsubsection{Tensão combinada}
+
+A tensão combinada é dada pela equação:
+
+\begin{equation}
+  \sigma_c = \sqrt{{\sigma_f}^2 + 3 {\left( \tau_T + \tau_V \right)}^2}
+  \label{eq:tensao_combinada_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $\sigma_c$: tensão combinada no tambor em \si{\mega\pascal}.
+  \item $\sigma_f$: tensão de flexão no tambor em \si{\mega\pascal}.
+  \item $\tau_T$: tensão de cisalhamento por torção no tambor em \si{\mega\pascal}.
+  \item $\tau_V$: tensão de cisalhamento cortante no tambor em \si{\mega\pascal}.
+\end{itemize}
+
+Substituindo os valores na equação \eqref{eq:tensao_combinada_tambor}:
+
+\begin{align*}
+  \sigma_c & = \sqrt{{\left( 19,92 \right)}^2 + 3 {\left( 3,3 + 2,26 \right)}^2} \\
+  \sigma_c & = \boxed{\SI{22,13}{\mega\pascal}}
+\end{align*}
+
+Verificando a tensão combinada com a tensão admissível \eqref{eq:tensao_admissivel_tambor}:
+
+\begin{align*}
+  \sigma_c                 & \le \sigma_{\text{adm}}                             \\
+  \SI{22,13}{\mega\pascal} & \le \SI{148,21}{\mega\pascal} \rightarrow \text{OK}
+\end{align*}
