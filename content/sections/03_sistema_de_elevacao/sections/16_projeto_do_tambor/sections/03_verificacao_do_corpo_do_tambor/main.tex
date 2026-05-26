@@ -1,1 +1,97 @@
-Esta seção está em elaboração e será detalhada na versão final do memorial.
+\subsubsection{Flexão}
+
+A tensão de flexão é dada pela equação:
+
+\begin{equation}
+  \sigma_f = \frac{M_{f_t}}{W_{f_t}}
+  \label{eq:tensao_flexao_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $M_{f_t}$: momento fletor máximo no tambor em \si{\newton\meter} (Tabela \ref{tab:dados_esforcos_tambor}).
+  \item $W_{f_t}$: módulo de resistência à flexão do tambor em \si{\meter\cubed}.
+\end{itemize}
+
+\vspace{1em}
+
+O módulo de resistência à flexão do tambor é dado pela equação:
+
+\begin{equation}
+  W_{f_t} = \frac{\pi \left( {D_u}^4 - {D_i}^4 \right)}{32 D_u}
+  \label{eq:modulo_resistencia_flexao_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $D_u$: diâmetro usinado do tambor em \si{\meter} \eqref{eq:diametro_usinado}.
+  \item $D_i$: diâmetro interno do tambor em \si{\meter} (Tabela \ref{tab:dados_do_tambor_adotado}).
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:modulo_resistencia_flexao_tambor}:
+
+\begin{align*}
+  W_{f_t} & = \frac{\pi \left( 0,34294^4 - 0,30794^4 \right)}{32 \cdot 0,34294} \\
+  W_{f_t} & = \boxed{\SI{1,39e-3}{\meter\cubed}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tensao_flexao_tambor}:
+
+\begin{align*}
+  \sigma_f & = \frac{27681,86}{1,39 \cdot 10^{-3}} \\
+  \sigma_f & = \boxed{\SI{19,92}{\mega\pascal}}
+\end{align*}
+
+\subsubsection{Torção}
+
+A tensão de cisalhamento por torção é dada pela equação:
+
+\begin{equation}
+  \tau_t = \frac{T_s}{W_{T_t}}
+  \label{eq:tensao_cisalhamento_torcao_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $T_s$: torque de saída do redutor em \si{\newton\meter} \eqref{eq:torque_saida_redutor}.
+  \item $W_{T_t}$: módulo de resistência à torção do tambor em \si{\meter\cubed}.
+\end{itemize}
+
+\vspace{1em}
+
+O módulo de resistência à torção do tambor é dado pela equação:
+
+\begin{equation}
+  W_{T_t} = \frac{\pi \left( {D_u}^4 - {D_i}^4 \right)}{16 D_u}
+  \label{eq:modulo_resistencia_torcao_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $D_u$: diâmetro usinado do tambor em \si{\meter} \eqref{eq:diametro_usinado}.
+  \item $D_i$: diâmetro interno do tambor em \si{\meter} (Tabela \ref{tab:dados_do_tambor_adotado}).
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:modulo_resistencia_torcao_tambor}:
+
+\begin{align*}
+  W_{T_t} & = \frac{\pi \left( 0,34294^4 - 0,30794^4 \right)}{16 \cdot 0,34294} \\
+  W_{T_t} & = \boxed{\SI{2,77e-3}{\meter\cubed}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_torcao_tambor}:
+
+\begin{align*}
+  \tau_t & = \frac{9150,44}{2,77 \cdot 10^{-3}} \\
+  \tau_t & = \boxed{\SI{3,3}{\mega\pascal}}
+\end{align*}
+
+\subsubsection{Cisalhamento}
