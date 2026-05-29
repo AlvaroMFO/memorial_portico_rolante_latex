@@ -35,8 +35,8 @@ Onde:
 Substituindo os valores na equação \eqref{eq:velocidade_do_cabo}:
 
 \begin{align*}
-  V_{\text{cabo}} & = \frac{4}{2} \cdot 0,1               \\
-  V_{\text{cabo}} & = \boxed{\SI{0,2}{\meter\per\second}}
+  V_{\text{cabo}} & = \frac{4}{2} \cdot 0{,}1               \\
+  V_{\text{cabo}} & = \boxed{\SI{0{,}2}{\meter\per\second}}
 \end{align*}
 
 A velocidade angular do tambor é dada pela equação:
@@ -59,20 +59,20 @@ Onde:
 Substituindo os valores na equação \eqref{eq:velocidade_angular_do_tambor}:
 
 \begin{align*}
-  \omega_{\text{tambor}} & = \frac{0,2}{\frac{355,6}{2} \cdot 10^{-3}} \\
-  \omega_{\text{tambor}} & = \boxed{\SI{1,13}{\radian\per\second}}
+  \omega_{\text{tambor}} & = \frac{0{,}2}{\frac{355{,}6}{2} \cdot 10^{-3}} \\
+  \omega_{\text{tambor}} & = \boxed{\SI{1{,}13}{\radian\per\second}}
 \end{align*}
 
 \begin{align*}
-  n_{\text{tambor}} & = \frac{60}{2 \pi} \cdot 1,13 \\
-  n_{\text{tambor}} & = \boxed{\SI{10,79}{\rpm}}
+  n_{\text{tambor}} & = \frac{60}{2 \pi} \cdot 1{,}13 \\
+  n_{\text{tambor}} & = \boxed{\SI{10{,}79}{\rpm}}
 \end{align*}
 
 Substituindo os valores na equação \eqref{eq:reducao_necessaria}:
 
 \begin{align*}
-  I_{\text{nec}} & = \frac{1170}{10,79} \\
-  I_{\text{nec}} & = \boxed{108,43}
+  I_{\text{nec}} & = \frac{1170}{10{,}79} \\
+  I_{\text{nec}} & = \boxed{108{,}43}
 \end{align*}
 
 O torque de acionamento é dado pela equação:
@@ -95,8 +95,8 @@ Onde:
 Substituindo os valores na equação \eqref{eq:torque_acionamento}:
 
 \begin{align*}
-  T_1 & = \frac{9550 \cdot 10,96}{1170}     \\
-  T_1 & = \boxed{\SI{89,46}{\newton\meter}}
+  T_1 & = \frac{9550 \cdot 10{,}96}{1170}     \\
+  T_1 & = \boxed{\SI{89{,}46}{\newton\meter}}
 \end{align*}
 
 O torque de saída é dado pela equação:
@@ -119,11 +119,11 @@ Onde:
 Substituindo os valores na equação \eqref{eq:torque_saida}:
 
 \begin{align*}
-  T_2 & = 89,46 \cdot 108,43                  \\
-  T_2 & = \boxed{\SI{9700,15}{\newton\meter}}
+  T_2 & = 89{,}46 \cdot 108{,}43                  \\
+  T_2 & = \boxed{\SI{9700{,}15}{\newton\meter}}
 \end{align*}
 
-Para o fator de segurança, dado o tempo de funcionamento diário de 4 a 8 horas, adotou-se $FS = 1,25$.
+Para o fator de segurança, dado o tempo de funcionamento diário de 4 a 8 horas, adotou-se $FS = 1{,}25$.
 
 Com base no catálogo de redutores da WEG Cestari, selecionou-se um redutor paralelo W06 de dois estágios, para rotação de entrada de \SI{1200}{\rpm}. As figuras e a tabela a seguir apresentam os dados extraídos do catálogo para o redutor adotado.
 
@@ -166,7 +166,7 @@ Com base no catálogo de redutores da WEG Cestari, selecionou-se um redutor para
     Diâmetro do eixo de saída     & $\varnothing DS$        & \SI{130}{\milli\meter}      \\
     Massa                         & $M_{\text{redutor}}$    & \SI{552}{\kilo\gram}        \\
     Força radial de saída         & $F_r$                   & \SI{88}{\kilo\newton}       \\
-    Rendimento                    & $\eta_{\text{redutor}}$ & 0,94                        \\
+    Rendimento                    & $\eta_{\text{redutor}}$ & 0{,}94                        \\
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -174,9 +174,9 @@ Com base no catálogo de redutores da WEG Cestari, selecionou-se um redutor para
 Avaliando o redutor adotado com base no fator de segurança:
 
 \begin{align*}
-  M_2                         & \ge T_2 \cdot FS \cdot 1,43                                      \\
-  28                          & \ge 9700,15 \cdot 10^{-3} \cdot 1,25 \cdot 1,43                  \\
-  \SI{28}{\kilo\newton\meter} & \ge \boxed{\SI{17,34}{\kilo\newton\meter}} \rightarrow \text{OK}
+  M_2                         & \ge T_2 \cdot FS \cdot 1{,}43                                      \\
+  28                          & \ge 9700{,}15 \cdot 10^{-3} \cdot 1{,}25 \cdot 1{,}43                  \\
+  \SI{28}{\kilo\newton\meter} & \ge \boxed{\SI{17{,}34}{\kilo\newton\meter}} \rightarrow \text{OK}
 \end{align*}
 
 A potência térmica corrigida é dada pela equação:
@@ -195,24 +195,24 @@ Com base no catálogo da WEG Cestari, os fatores de correção são:
     \toprule
     Descrição                     & Símbolo & Valor  \\
     \midrule
-    Fator de temperatura ambiente & $f_a$   & $0,71$ \\
+    Fator de temperatura ambiente & $f_a$   & $0{,}71$ \\
     Fator de ambiente             & $f_c$   & $1$    \\
-    Fator de altitude             & $f_h$   & $0,95$ \\
-    Fator de temperatura do óleo  & $f_t$   & $1,07$ \\
-    Fator de tempo de operação    & $f_b$   & $1,35$ \\
+    Fator de altitude             & $f_h$   & $0{,}95$ \\
+    Fator de temperatura do óleo  & $f_t$   & $1{,}07$ \\
+    Fator de tempo de operação    & $f_b$   & $1{,}35$ \\
     \bottomrule
   \end{tabularx}
 \end{table}
 
 Substituindo os valores na equação \eqref{eq:potencia_termica_corrigida}:
 \begin{align*}
-  P_T & = 75 \cdot 0,71 \cdot 1 \cdot 0,95 \cdot 1,07 \cdot 1,35 \\
-  P_T & = \boxed{\SI{73,07}{\kilo\watt}}
+  P_T & = 75 \cdot 0{,}71 \cdot 1 \cdot 0{,}95 \cdot 1{,}07 \cdot 1{,}35 \\
+  P_T & = \boxed{\SI{73{,}07}{\kilo\watt}}
 \end{align*}
 
 Verificando a potência térmica corrigida:
 
 \begin{align*}
   P_T                    & > P_R                                          \\
-  \SI{73,07}{\kilo\watt} & > \SI{10,96}{\kilo\watt} \rightarrow \text{OK}
+  \SI{73{,}07}{\kilo\watt} & > \SI{10{,}96}{\kilo\watt} \rightarrow \text{OK}
 \end{align*}
