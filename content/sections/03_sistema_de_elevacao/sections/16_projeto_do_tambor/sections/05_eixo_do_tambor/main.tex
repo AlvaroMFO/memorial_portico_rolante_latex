@@ -1,0 +1,171 @@
+O material utilizado para a fabricação do eixo do tambor é o aço SAE 1045, cujas tensões admissíveis são:
+
+\begin{table}[H]
+  \centering
+  \caption{Tensões admissíveis do eixo do tambor}
+  \label{tab:tensoes_eixo_do_tambor}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Descrição             & Símbolo    & Valor                  \\
+    \midrule
+    Tensão de escoamento  & $\sigma_e$ & \SI{400}{\mega\pascal} \\
+    Tensão de resistência & $\sigma_R$ & \SI{600}{\mega\pascal} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+A tensão de flexão admissível do eixo do tambor é dada pela equação \eqref{eq:tensao_admissivel_tambor}.
+
+Substituindo os valores na equação \eqref{eq:tensao_admissivel_tambor}:
+\begin{align*}
+  \sigma_{\text{adm}} & = \frac{600}{1 \cdot 2,8}           \\
+  \sigma_{\text{adm}} & = \boxed{\SI{214,29}{\mega\pascal}}
+\end{align*}
+
+A tensão de cisalhamento admissível do eixo do tambor é dada pela equação \eqref{eq:tensao_cisalhamento_admissivel_tambor}.
+
+Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_admissivel_tambor}:
+
+\begin{align*}
+  \tau_{\text{adm}} & = \frac{600}{\sqrt{3}}              \\
+  \tau_{\text{adm}} & = \boxed{\SI{123,72}{\mega\pascal}}
+\end{align*}
+
+\subsubsection{Pré-dimensionamento a flexo-torção}
+
+A tensão de flexão do eixo do tambor é dada pela equação:
+
+\begin{equation}
+  \sigma_f = \frac{M_{f_e}}{W_f}
+  \label{eq:tensao_flexao_eixo_do_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $\sigma_f$: tensão de flexão em \si{\mega\pascal}.
+  \item $M_{f_e}$: momento fletor no eixo do tambor em \si{\newton\meter} (Tabela \ref{tab:dados_esforcos_tambor}).
+  \item $W_f$: módulo de resistência à flexão em \si{\meter^3}.
+\end{itemize}
+
+\vspace{1em}
+
+O módulo de resistência à flexão é dado pela equação:
+
+\begin{equation}
+  W_f = \frac{\pi d^3}{32}
+  \label{eq:modulo_de_resistencia_a_flexao_eixo_do_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $W_f$: módulo de resistência à flexão em \si{\meter^3}.
+  \item $d$: diâmetro do eixo do tambor em \si{\meter}.
+\end{itemize}
+
+\vspace{1em}
+
+A tensão de cisalhamento por torção no eixo do tambor é dada pela equação:
+
+\begin{equation}
+  \tau_T = \frac{T_s}{W_T}
+  \label{eq:tensao_cisalhamento_por_torcao_eixo_do_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $\tau_T$: tensão de cisalhamento por torção em \si{\mega\pascal}.
+  \item $T_s$: torque de saída do redutor em \si{\newton\meter} \eqref{eq:torque_saida_redutor}.
+  \item $W_T$: módulo de resistência à torção em \si{\meter^3}.
+\end{itemize}
+
+\vspace{1em}
+
+O módulo de resistência à torção é dado pela equação:
+
+\begin{equation}
+  W_T = \frac{\pi d^3}{16}
+  \label{eq:modulo_de_resistencia_a_torcao_eixo_do_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $W_T$: módulo de resistência à torção em \si{\meter^3}.
+  \item $d$: diâmetro do eixo do tambor em \si{\meter}.
+\end{itemize}
+
+\vspace{1em}
+
+Os módulos de resistência possuem a seguinte relação:
+
+\begin{equation}
+  W_T = 2 \cdot W_f
+  \label{eq:relacao_modulos_eixo}
+\end{equation}
+
+A tensão combinada é dada pela equação:
+
+\begin{equation}
+  \sigma_c = \frac{M_c}{W_f} = \sqrt{{\sigma_f}^2 + 3 {\tau_T}^2}
+  \label{eq:tensao_combinada_eixo_do_tambor}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $\sigma_c$: tensão combinada em \si{\mega\pascal}.
+  \item $M_c$: momento fletor combinado em \si{\newton\meter}.
+  \item $W_f$: módulo de resistência à flexão em \si{\meter^3}.
+  \item $\sigma_f$: tensão de flexão em \si{\mega\pascal}.
+  \item $\tau_T$: tensão de cisalhamento por torção em \si{\mega\pascal}.
+\end{itemize}
+
+\vspace{1em}
+
+Desenvolvendo a equação \eqref{eq:tensao_combinada_eixo_do_tambor}, tem-se:
+
+\begin{equation*}
+  \frac{M_c}{\cancel{W_f}} = \sqrt{{\left(\frac{M_{f_e}}{\cancel{W_f}}\right)}^2 + 3 {\left(\frac{T_s}{2 \cancel{W_f}}\right)}^2}
+\end{equation*}
+
+\begin{equation}
+  M_c = \sqrt{{M_{f_e}}^2 + \frac{3}{4} \cdot {T_s}^2}
+  \label{eq:momento_fletor_combinado_eixo_do_tambor}
+\end{equation}
+
+Define-se que a tensão combinada deve ser menor ou igual à tensão de flexão admissível do material, ou seja:
+
+\begin{equation*}
+  \sigma_c \le \sigma_{\text{adm}}
+\end{equation*}
+
+Com isso, é possível obter a equação para calcular o diâmetro do eixo do tambor:
+
+\begin{align*}
+   & \sigma_{\text{adm}} = \frac{M_c}{W_f}                                        \\
+   &                                                                              \\
+   & \sigma_{\text{adm}} = \frac{M_c}{\frac{\pi d^3}{32}}                         \\
+   &                                                                              \\
+   & \sigma_{\text{adm}} = \frac{32 M_c}{\pi d^3}                                 \\
+   &                                                                              \\
+   & d^3 = \frac{32}{\pi} \cdot \frac{M_c}{\sigma_{\text{adm}}}                   \\
+   &                                                                              \\
+   & d = \sqrt[3]{\frac{32}{\pi}} \cdot \sqrt[3]{\frac{M_c}{\sigma_{\text{adm}}}}
+\end{align*}
+
+\begin{equation}
+  d_{\text{eixo}} \approx 2,17 \cdot \sqrt[3]{\frac{M_c}{\sigma_{\text{adm}}}}
+  \label{eq:diametro_eixo_do_tambor}
+\end{equation}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:momento_fletor_combinado_eixo_do_tambor}:
+
+\begin{align*}
+  M_c & = \sqrt{2785{,}41^2 + \frac{3}{4} \cdot 9150,44^2} \\
+  M_c & = \boxed{\SI{8399,79}{\newton\meter}}
+\end{align*}
