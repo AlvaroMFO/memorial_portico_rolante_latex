@@ -34,24 +34,24 @@ Onde:
 
 \vspace{1em}
 
-Adotou-se $\eta_{\text{moitão}} = 0{,}9925$, conforme a equação \eqref{eq:rendimento_moitao}. Para o redutor, adotou-se $\eta_{\text{redutor}} = 0{,}94$, segundo o fabricante WEG Cestari. Para os mancais, adotou-se $\eta_{\text{mancal}} = 0{,}985$.
+Adotou-se $\eta_{\text{moitão}} = \num{0.9925}$, conforme a equação \eqref{eq:rendimento_moitao}. Para o redutor, adotou-se $\eta_{\text{redutor}} = \num{0.94}$, segundo o fabricante WEG Cestari. Para os mancais, adotou-se $\eta_{\text{mancal}} = \num{0.985}$.
 
 Substituindo os valores na equação \eqref{eq:rendimento_sistema}:
 
 \begin{align*}
-  \eta_{\text{sistema}} & = 0{,}9925 \cdot 0{,}94 \cdot 0{,}985 \\
-  \eta_{\text{sistema}} & = \boxed{0{,}919}
+  \eta_{\text{sistema}} & = \num{0.9925} \cdot \num{0.94} \cdot \num{0.985} \\
+  \eta_{\text{sistema}} & = \boxed{\num{0.919}}
 \end{align*}
 
 \vspace{1em}
 
-Com base na tabela de velocidades do Projeto Preliminar (Figura~\ref{fig:velocidades}), adotou-se a velocidade de elevação de \SI{6}{\meter\per\minute}, equivalente a \SI{0{,}1}{\meter\per\second}. Para a carga, utilizou-se $W_s = \SI{100{,}75e3}{\newton}$, obtida na equação \eqref{eq:ws}.
+Com base na tabela de velocidades do Projeto Preliminar (Figura~\ref{fig:velocidades}), adotou-se a velocidade de elevação de \SI{6}{\meter\per\minute}, equivalente a \SI{0.1}{\meter\per\second}. Para a carga, utilizou-se $W_s = \SI{100.75e3}{\newton}$, obtida na equação \eqref{eq:ws}.
 
 Substituindo os valores na equação \eqref{eq:potencia_requerida}:
 
 \begin{align*}
-  P_R & = \frac{100{,}75 \cdot 10^3 \cdot 0{,}1}{0{,}919 \cdot 1000} \\
-  P_R & = \boxed{\SI{10{,}96}{\kilo\watt}}
+  P_R & = \frac{\num{100.75} \cdot 10^3 \cdot \num{0.1}}{\num{0.919} \cdot 1000} \\
+  P_R & = \boxed{\SI{10.96}{\kilo\watt}}
 \end{align*}
 
 \vspace{1em}
@@ -60,14 +60,14 @@ Com base no catálogo de motores elétricos da WEG, selecionou-se um motor trif�
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/10_motor_de_elevacao/images/motor_catalogo.png}
+  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/10_motor_de_elevacao/images/motor_catalogo.png}
   \caption{Catálogo de motores elétricos \cite[p.~B-10]{weg}}
   \label{fig:motor_catalogo}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/10_motor_de_elevacao/images/motor_dimensoes.png}
+  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/10_motor_de_elevacao/images/motor_dimensoes.png}
   \caption{Dimensões do motor adotado segundo o catálogo \cite[p.~C-5]{weg}}
   \label{fig:motor_dimensoes}
 \end{figure}

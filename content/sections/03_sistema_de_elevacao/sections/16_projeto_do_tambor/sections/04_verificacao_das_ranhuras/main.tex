@@ -23,8 +23,8 @@ Onde:
 Substituindo os valores na equação \eqref{eq:tensao_devido_ao_efeito_de_viga}:
 
 \begin{align*}
-  \sigma_v & = \frac{2 \cdot 25377{,}8 \cdot 2{,}112}{\pi \cdot 0{,}34794^2 \cdot 0{,}01} \\
-  \sigma_v & = \boxed{\SI{28{,}19}{\mega\pascal}}
+  \sigma_v & = \frac{2 \cdot \num{25377.8} \cdot \num{2.112}}{\pi \cdot \num{0.34794}^2 \cdot \num{0.01}} \\
+  \sigma_v & = \boxed{\SI{28.19}{\mega\pascal}}
 \end{align*}
 
 \subsubsection{Tensão de flexão local}
@@ -32,7 +32,7 @@ Substituindo os valores na equação \eqref{eq:tensao_devido_ao_efeito_de_viga}:
 A tensão de flexão local é dada pela equação:
 
 \begin{equation}
-  \sigma_f = 0{,}96 \cdot T \sqrt[4]{\frac{1}{{D_t}^2 \cdot {h_1}^6}}
+  \sigma_f = \num{0.96} \cdot T \sqrt[4]{\frac{1}{{D_t}^2 \cdot {h_1}^6}}
   \label{eq:tensao_de_flexao_local}
 \end{equation}
 
@@ -50,8 +50,8 @@ Onde:
 Substituindo os valores na equação \eqref{eq:tensao_de_flexao_local}:
 
 \begin{align*}
-  \sigma_f & = 0{,}96 \cdot 25377{,}8 \sqrt[4]{\frac{1}{0{,}34794^2 \cdot 0{,}01^6}} \\
-  \sigma_f & = \boxed{\SI{41{,}3}{\mega\pascal}}
+  \sigma_f & = \num{0.96} \cdot \num{25377.8} \sqrt[4]{\frac{1}{\num{0.34794}^2 \cdot \num{0.01}^6}} \\
+  \sigma_f & = \boxed{\SI{41.3}{\mega\pascal}}
 \end{align*}
 
 \subsubsection{Tensão de compressão do enrolamento do cabo}
@@ -59,7 +59,7 @@ Substituindo os valores na equação \eqref{eq:tensao_de_flexao_local}:
 A tensão de compressão do enrolamento do cabo é dada pela equação:
 
 \begin{equation}
-  \sigma_{c_e} = \frac{0{,}5 \cdot T \cdot L_t}{p \cdot h_1 + 0{,}112 \cdot p^2}
+  \sigma_{c_e} = \frac{\num{0.5} \cdot T \cdot L_t}{p \cdot h_1 + \num{0.112} \cdot p^2}
   \label{eq:tensao_de_compressao_do_enrolamento_do_cabo}
 \end{equation}
 
@@ -78,8 +78,8 @@ Onde:
 Substituindo os valores na equação \eqref{eq:tensao_de_compressao_do_enrolamento_do_cabo}:
 
 \begin{align*}
-  \sigma_{c_e} & = \frac{0{,}5 \cdot 25377{,}8 \cdot 2{,}112}{0{,}021 \cdot 0{,}01 + 0{,}112 \cdot 0{,}021^2} \\
-  \sigma_{c_e} & = \boxed{\SI{103{,}32}{\mega\pascal}}
+  \sigma_{c_e} & = \frac{\num{0.5} \cdot \num{25377.8} \cdot \num{2.112}}{\num{0.021} \cdot \num{0.01} + \num{0.112} \cdot \num{0.021}^2} \\
+  \sigma_{c_e} & = \boxed{\SI{103.32}{\mega\pascal}}
 \end{align*}
 
 \subsubsection{Tensão resultante}
@@ -105,13 +105,13 @@ Onde:
 Substituindo os valores na equação \eqref{eq:tensao_resultante}:
 
 \begin{align*}
-  \sigma_{\text{res}} & = \sqrt{{\left(28{,}19 + 41{,}3\right)}^2 + {103{,}32}^2} \\
-  \sigma_{\text{res}} & = \boxed{\SI{124{,}52}{\mega\pascal}}
+  \sigma_{\text{res}} & = \sqrt{{\left(\num{28.19} + \num{41.3}\right)}^2 + {\num{103.32}}^2} \\
+  \sigma_{\text{res}} & = \boxed{\SI{124.52}{\mega\pascal}}
 \end{align*}
 
 Verificando a tensão resultante com a tensão admissível (\eqref{eq:tensao_admissivel_tambor}):
 
 \begin{align*}
   \sigma_{\text{res}}       & \le \sigma_{\text{adm}}                             \\
-  \SI{124{,}52}{\mega\pascal} & \le \SI{148{,}21}{\mega\pascal} \rightarrow \text{OK}
+  \SI{124.52}{\mega\pascal} & \le \SI{148.21}{\mega\pascal} \rightarrow \text{OK}
 \end{align*}

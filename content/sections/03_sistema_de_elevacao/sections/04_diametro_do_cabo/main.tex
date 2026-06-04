@@ -29,8 +29,8 @@ Para o grupo de mecanismo 1AM, o valor de $Q$ para cabo normal é 0,28.
 Substituindo os valores na equação \eqref{eq:diametro_do_cabo}:
 
 \begin{align*}
-  d_c & = {,}28 \sqrt{2537{,}78}             \\
-  d_c & = \boxed{\SI{14{,}11}{\milli\meter}}
+  d_c & = \num{0.28} \sqrt{\num{2537.78}}        \\
+  d_c & = \boxed{\SI{14.11}{\milli\meter}}
 \end{align*}
 
 Adotou-se um cabo de aço CIMAF, classe 6x41 Warrington-Seale IPS, com alma de fibra. As propriedades do cabo, conforme o catálogo da CIMAF, são:
@@ -42,7 +42,7 @@ Adotou-se um cabo de aço CIMAF, classe 6x41 Warrington-Seale IPS, com alma de f
   \label{fig:propriedades_cabos_cimaf}
 \end{figure}
 
-Para um cabo de \SI{14{,}5}{\milli\meter}, a carga de ruptura mínima é de \SI{12{,}5}{\tonneforce}.
+Para um cabo de \SI{14.5}{\milli\meter}, a carga de ruptura mínima é de \SI{12.5}{\tonneforce}.
 
 Segundo o catálogo da CIMAF, o fator de segurança deve ser de $6$ a $8$ para pontes rolantes, aplicável também a pórticos rolantes. Os valores recomendados são:
 
@@ -73,17 +73,17 @@ Onde:
 Substituindo os valores na equação \eqref{eq:fator_seguranca}:
 
 \begin{align*}
-  F_s & = \frac{12{,}5}{2537{,}78 \cdot 10^{-3}}             \\
-  F_s & = \boxed{4{,}93} \leq 6 \rightarrow \text{Reprovado}
+  F_s & = \frac{\num{12.5}}{\num{2537.78} \cdot 10^{-3}}             \\
+  F_s & = \boxed{\num{4.93}} \leq 6 \rightarrow \text{Reprovado}
 \end{align*}
 
-O cabo adotado não atende aos requisitos de segurança; portanto, foi necessário selecionar um cabo de maior diâmetro. Adotou-se um cabo com diâmetro de \SI{16}{\milli\meter}, cuja carga de ruptura mínima é \SI{15{,}2}{\tonneforce}.
+O cabo adotado não atende aos requisitos de segurança; portanto, foi necessário selecionar um cabo de maior diâmetro. Adotou-se um cabo com diâmetro de \SI{16}{\milli\meter}, cuja carga de ruptura mínima é \SI{15.2}{\tonneforce}.
 
 Aplicando a nova carga de ruptura mínima na equação \eqref{eq:fator_seguranca}:
 
 \begin{align*}
-  F_s & = \frac{15{,}2}{2537{,}78 \cdot 10^{-3}}             \\
-  F_s & = \boxed{5{,}99} \leq 6 \rightarrow \text{Reprovado}
+  F_s & = \frac{\num{15.2}}{\num{2537.78} \cdot 10^{-3}}             \\
+  F_s & = \boxed{\num{5.99}} \leq 6 \rightarrow \text{Reprovado}
 \end{align*}
 
 O cabo adotado ainda não atende aos requisitos de segurança; assim, foi necessário selecionar um cabo de maior diâmetro. Adotou-se um cabo com diâmetro de \SI{19}{\milli\meter}, cuja carga de ruptura mínima é \SI{22}{\tonneforce}.
@@ -91,8 +91,8 @@ O cabo adotado ainda não atende aos requisitos de segurança; assim, foi necess
 Aplicando a nova carga de ruptura mínima na equação \eqref{eq:fator_seguranca}:
 
 \begin{align*}
-  F_s & = \frac{22}{2537{,}78 \cdot 10^{-3}}          \\
-  F_s & = \boxed{8{,}67} \geq 6 \rightarrow \text{OK}
+  F_s & = \frac{22}{\num{2537.78} \cdot 10^{-3}}          \\
+  F_s & = \boxed{\num{8.67}} \geq 6 \rightarrow \text{OK}
 \end{align*}
 
 O cabo adotado atende aos requisitos de segurança.
@@ -106,7 +106,7 @@ O cabo adotado atende aos requisitos de segurança.
     Parâmetro               & Símbolo           & Valor                           \\
     \midrule
     Diâmetro do cabo        & $d_c$             & \SI{19}{\milli\meter}           \\
-    Massa por metro do cabo & $m_{\text{cabo}}$ & \SI{1{,}359}{\kilo\gram/\meter} \\
+    Massa por metro do cabo & $m_{\text{cabo}}$ & \SI{1.359}{\kilo\gram/\meter} \\
     Carga de ruptura mínima & $CRM$             & \SI{22}{\tonneforce}            \\
     \bottomrule
   \end{tabularx}

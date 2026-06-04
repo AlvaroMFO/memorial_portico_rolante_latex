@@ -31,7 +31,8 @@
 \sisetup{
   output-decimal-marker={,},
   per-mode=symbol,
-  exponent-product=\cdot
+  exponent-product=\cdot,
+  output-decimal-marker={,}
 }
 \DeclareSIUnit{\tonneforce}{tf}
 \DeclareSIUnit{\rpm}{rpm}
@@ -87,7 +88,7 @@
   \fancyhead[R]{%
     \includegraphics[height=\cabecalhologoaltura,width=\cabecalhologolargura,keepaspectratio]{assets/fho.pdf}%
   }%
-  \fancyfoot[L]{\instituicao}%
+  \fancyfoot[L]{\titulo}%
   \fancyfoot[R]{\thepage\ de \pageref{LastPage}}%
   \renewcommand{\headrulewidth}{0.4pt}%
   \renewcommand{\footrulewidth}{0.4pt}%

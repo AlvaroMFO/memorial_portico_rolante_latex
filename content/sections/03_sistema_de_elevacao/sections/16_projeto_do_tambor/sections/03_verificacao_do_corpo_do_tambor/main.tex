@@ -37,15 +37,15 @@ Onde:
 Substituindo os valores na equação \eqref{eq:modulo_resistencia_flexao_tambor}:
 
 \begin{align*}
-  W_{f_t} & = \frac{\pi \left( 0{,}34294^4 - 0{,}30794^4 \right)}{32 \cdot 0{,}34294} \\
-  W_{f_t} & = \boxed{\SI{1{,}39e-3}{\meter\cubed}}
+  W_{f_t} & = \frac{\pi \left( \num{0.34294}^4 - \num{0.30794}^4 \right)}{32 \cdot \num{0.34294}} \\
+  W_{f_t} & = \boxed{\SI{1.39e-3}{\meter\cubed}}
 \end{align*}
 
 Substituindo os valores na equação \eqref{eq:tensao_flexao_tambor}:
 
 \begin{align*}
-  \sigma_f & = \frac{27681{,}86}{1{,}39 \cdot 10^{-3}} \\
-  \sigma_f & = \boxed{\SI{19{,}92}{\mega\pascal}}
+  \sigma_f & = \frac{\num{27681.86}}{\num{1.39} \cdot 10^{-3}} \\
+  \sigma_f & = \boxed{\SI{19.92}{\mega\pascal}}
 \end{align*}
 
 \subsubsection{Torção}
@@ -87,15 +87,15 @@ Onde:
 Substituindo os valores na equação \eqref{eq:modulo_resistencia_torcao_tambor}:
 
 \begin{align*}
-  W_{T_t} & = \frac{\pi \left( 0{,}34294^4 - 0{,}30794^4 \right)}{16 \cdot 0{,}34294} \\
-  W_{T_t} & = \boxed{\SI{2{,}77e-3}{\meter\cubed}}
+  W_{T_t} & = \frac{\pi \left( \num{0.34294}^4 - \num{0.30794}^4 \right)}{16 \cdot \num{0.34294}} \\
+  W_{T_t} & = \boxed{\SI{2.77e-3}{\meter\cubed}}
 \end{align*}
 
 Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_torcao_tambor}:
 
 \begin{align*}
-  \tau_T & = \frac{9150{,}44}{2{,}77 \cdot 10^{-3}} \\
-  \tau_T & = \boxed{\SI{3{,}3}{\mega\pascal}}
+  \tau_T & = \frac{\num{9150.44}}{\num{2.77} \cdot 10^{-3}} \\
+  \tau_T & = \boxed{\SI{3.3}{\mega\pascal}}
 \end{align*}
 
 \subsubsection{Cisalhamento}
@@ -137,15 +137,15 @@ Onde:
 Substituindo os valores na equação \eqref{eq:area_secao_transversal_tambor}:
 
 \begin{align*}
-  A_m & = \frac{\pi \left( 0{,}34294^2 - 0{,}30794^2 \right)}{4} \\
-  A_m & = \boxed{\SI{17{,}89e-3}{\meter\squared}}
+  A_m & = \frac{\pi \left( \num{0.34294}^2 - \num{0.30794}^2 \right)}{4} \\
+  A_m & = \boxed{\SI{17.89e-3}{\meter\squared}}
 \end{align*}
 
 Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_tambor}:
 
 \begin{align*}
-  \tau_V & = \frac{4}{3} \frac{30320{,}2}{17{,}89 \cdot 10^{-3}} \\
-  \tau_V & = \boxed{\SI{2{,}26}{\mega\pascal}}
+  \tau_V & = \frac{4}{3} \frac{\num{30320.2}}{\num{17.89} \cdot 10^{-3}} \\
+  \tau_V & = \boxed{\SI{2.26}{\mega\pascal}}
 \end{align*}
 
 \subsubsection{Tensão combinada}
@@ -169,13 +169,13 @@ Onde:
 Substituindo os valores na equação \eqref{eq:tensao_combinada_tambor}:
 
 \begin{align*}
-  \sigma_c & = \sqrt{{\left( 19{,}92 \right)}^2 + 3 {\left( 3{,}3 + 2{,}26 \right)}^2} \\
-  \sigma_c & = \boxed{\SI{22{,}13}{\mega\pascal}}
+  \sigma_c & = \sqrt{{\left( \num{19.92} \right)}^2 + 3 {\left( \num{3.3} + \num{2.26} \right)}^2} \\
+  \sigma_c & = \boxed{\SI{22.13}{\mega\pascal}}
 \end{align*}
 
 Verificando a tensão combinada com a tensão admissível \eqref{eq:tensao_admissivel_tambor}:
 
 \begin{align*}
   \sigma_c                 & \le \sigma_{\text{adm}}                             \\
-  \SI{22{,}13}{\mega\pascal} & \le \SI{148{,}21}{\mega\pascal} \rightarrow \text{OK}
+  \SI{22.13}{\mega\pascal} & \le \SI{148.21}{\mega\pascal} \rightarrow \text{OK}
 \end{align*}
