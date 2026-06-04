@@ -74,16 +74,19 @@
 
 % Comandos de apoio
 \newcommand{\titulo}{Memorial de Cálculo - Pórtico Rolante}
+\newcommand{\disciplina}{Projeto de Máquinas}
+\newcommand{\curso}{Engenharia Mecânica}
+\newcommand{\professor}{Prof. Dr. Gilberto Machado da Silva}
+\newcommand{\equipe}{Equipe 11}
 \newcommand{\alvaro}{Alvaro Miguel Ferreira de Oliveira}
 \newcommand{\alvaroRa}{111218}
 \newcommand{\duin}{Gabriel Lima Alves de Souza}
 \newcommand{\duinRa}{111713}
 \newcommand{\leo}{Leonardo Alison da Silva}
 \newcommand{\leoRa}{112509}
-\newcommand{\disciplina}{Projeto de Máquinas}
-\newcommand{\curso}{Engenharia Mecânica}
 \newcommand{\instituicao}{Fundação Hermínio Ometto}
 \newcommand{\cidade}{Araras}
+\newcommand{\mes}{Junho}
 \newcommand{\ano}{2026}
 
 \begin{document}
@@ -95,7 +98,12 @@
   \includegraphics[width=0.5\textwidth]{assets/fho.pdf}\par
   \vspace{2.5cm}
   {\Large \bfseries \titulo \par}
+  \vspace{1cm}
+  {\large \curso \par}
+  {\large Disciplina: \disciplina \par}
+  {\large \professor \par}
   \vspace{2cm}
+  {\large \equipe \par}
   {\large
     \begin{tabular}{@{}l l@{}}
       \alvaro & RA: \alvaroRa \\
@@ -104,12 +112,18 @@
     \end{tabular}
     \par
   }
+  \vspace{1cm}
+  {\large Dados do Projeto \par}
+  \begin{tabular}{@{}l l@{}}
+    Carga útil ($W_u$)        & \SI{100}{\kilo\newton} \\
+    Vão do pórtico ($V$)      & \SI{8}{\meter}         \\
+    Altura de elevação ($H$)  & \SI{15}{\meter}        \\
+    Altura do pórtico ($H_p$) & \SI{8}{\meter}         \\
+    Grupo                     & A                      \\
+  \end{tabular}
   \vfill
-  {\large \curso \par}
-  {\large Disciplina: \disciplina \par}
-  \vspace{3cm}
   {\large \cidade \par}
-  {\large \ano \par}
+  {\large \mes \ de \ano \par}
 \end{titlepage}
 
 \clearpage
