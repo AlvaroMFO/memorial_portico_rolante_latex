@@ -54,7 +54,8 @@
       "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Dummy.*\"}",
       "{\"rule\":\"MORFOLOGIK_RULE_PT_BR\",\"sentence\":\".*Ina.*\"}",
       "{\"rule\":\"PARONYM_POLIA_522\",\"sentence\":\".*polia.*\"}",
-      "{\"rule\":\"PT_BARBARISMS_REPLACE_SUITE\",\"sentence\":\".*Suite.*\"}"
+      "{\"rule\":\"PT_BARBARISMS_REPLACE_SUITE\",\"sentence\":\".*Suite.*\"}",
+      "{\"rule\":\"UPPERCASE_SENTENCE_START\",\"sentence\":\".*\\\\{memorial\\\\}.*\"}"
     ]
   },
   "ltex.dictionary": {
@@ -98,7 +99,9 @@
     "\\si{}": "dummy",
     "\\SI{}{}": "dummy",
     "\\titleformat{}[]": "dummy",
-    "\\boxed{}": "dummy"
+    "\\boxed{}": "dummy",
+    "\\fancypagestyle{}": "dummy",
+    "\\assignpagestyle{}{}": "dummy"
   },
   "ltex.latex.environments": {
     "equation": "ignore",
