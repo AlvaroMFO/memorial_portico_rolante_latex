@@ -1,3 +1,4 @@
+% LTeX: enabled=false
 \documentclass[12pt,a4paper,oneside]{report}
 
 % Codificacao e idioma
@@ -108,10 +109,14 @@
 \usepackage[alf]{abntex2cite}
 
 \titleformat{\chapter}[hang]
-  {\normalfont\huge\bfseries} % estilo
-  {\thechapter}               % só o número
-  {1em}                       % espaço entre número e título
-  {}                          % código antes do título
+  {\normalfont\huge\bfseries}                   % estilo
+  {\chaptertitlename\ \thechapter \text{ – }}  % só o número
+  {0pt}                                         % espaço entre número e título
+  {}                                            % código antes do título
+\titlespacing*{\chapter}
+  {0pt}    % recuo à esquerda
+  {10pt}   % espaço antes do título
+  {2.5ex}  % espaço depois do título
 
 % Comandos de apoio
 \newcommand{\titulo}{Memorial de Cálculo - Pórtico Rolante}
@@ -141,15 +146,15 @@
   {\Large \bfseries \titulo \par}
   \vspace{1cm}
   {\large \curso \par}
-  {\large Disciplina: \disciplina \par}
+  {\large Disciplina \disciplina \par}
   {\large \professor \par}
   \vspace{2cm}
   {\large \equipe \par}
   {\large
     \begin{tabular}{@{}l l@{}}
-      \alvaro & RA: \alvaroRa \\
-      \duin   & RA: \duinRa   \\
-      \leo    & RA: \leoRa
+      \alvaro & RA \alvaroRa \\
+      \duin   & RA \duinRa   \\
+      \leo    & RA \leoRa
     \end{tabular}
     \par
   }
