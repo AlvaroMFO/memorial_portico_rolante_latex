@@ -13,7 +13,9 @@
   left=3cm,
   right=2.5cm,
   top=2.5cm,
-  bottom=2.5cm
+  bottom=2.5cm,
+  headheight=1.75cm,
+  headsep=0.85cm
 }
 \usepackage{setspace}
 \onehalfspacing
@@ -62,6 +64,42 @@
 \usepackage{csquotes}
 
 \usepackage{titlesec}
+
+% Cabeçalho e rodapé (corpo do documento)
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headwidth}{\textwidth}
+
+\newcommand{\cabecalhosecao}{}
+\renewcommand{\chaptermark}[1]{\gdef\cabecalhosecao{#1}}
+
+\newcommand{\cabecalhologoaltura}{1cm}
+\newcommand{\cabecalhologolargura}{2.2cm}
+\newcommand{\cabecalhoestilo}{%
+  \fancyhf{}%
+  \fancyhead[L]{%
+    \begin{minipage}[c][\cabecalhologoaltura][c]{\dimexpr\headwidth-\cabecalhologolargura-1em\relax}%
+      \nouppercase{\cabecalhosecao}%
+    \end{minipage}%
+  }%
+  \fancyhead[R]{%
+    \includegraphics[height=\cabecalhologoaltura,width=\cabecalhologolargura,keepaspectratio]{assets/fho.pdf}%
+  }%
+  \fancyfoot[L]{Instituição: \instituicao}%
+  \fancyfoot[R]{Página: \thepage\ de \pageref{LastPage}}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+\fancypagestyle{memorial}{%
+  \cabecalhoestilo
+}
+
+\fancypagestyle{plain}{%
+  \cabecalhoestilo
+}
+
+\assignpagestyle{chapter}{memorial}
 
 % Referencias bibliograficas
 \usepackage[alf]{abntex2cite}
@@ -126,15 +164,19 @@
   {\large \mes \ de \ano \par}
 \end{titlepage}
 
+\pagenumbering{arabic}
+\pagestyle{memorial}
+
 \clearpage
+\gdef\cabecalhosecao{\contentsname}
 \tableofcontents
 \clearpage
+\gdef\cabecalhosecao{\listfigurename}
 \listoffigures
 \clearpage
+\gdef\cabecalhosecao{\listtablename}
 \listoftables
 \clearpage
-
-\pagenumbering{arabic}
 
 \chapter{Introdução}
 \input{content/sections/01_introducao/main}
