@@ -1,1 +1,173 @@
-Esta seção está em elaboração e será detalhada na versão final do memorial.
+\subsubsection{Diâmetro ($d_1$)}
+
+\begin{itemize}
+  \item \textbf{Flexão}
+\end{itemize}
+
+A tensão de flexão é dada por:
+
+\begin{equation}
+  \sigma_f = \frac{M_{f_e}}{W_f}
+  \label{eq:sigma_f_d1}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $M_{f_e}$: momento fletor no eixo em \si{\newton\meter} (Tabela \ref{tab:dados_esforcos_tambor}).
+  \item $W_f$: módulo de resistência à flexão em \si{\meter^3}.
+\end{itemize}
+
+\vspace{1em}
+
+O módulo de resistência à flexão é dado por:
+
+\begin{equation}
+  W_f = \frac{\pi \cdot {d_1}^3}{32}
+  \label{eq:w_f_d1}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $d_1$: diâmetro do eixo em \si{\milli\meter} \eqref{eq:d_1_eixo_do_tambor}.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:w_f_d1}:
+
+\begin{align*}
+  W_f & = \frac{\pi \cdot {\left( 90 \cdot 10^{-3} \right)}^3}{32} \\
+  W_f & = \boxed{\SI{7.16e-5}{\meter^3}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:sigma_f_d1}:
+
+\begin{align*}
+  \sigma_f & = \frac{\num{2785.41}}{\num{7.16e-5}} \\
+  \sigma_f & = \boxed{\SI{38.9}{\mega\pascal}}
+\end{align*}
+
+\begin{itemize}
+  \item \textbf{Torção}
+\end{itemize}
+
+A tensão de cisalhamento por torção é dada por:
+
+\begin{equation}
+  \tau_T = \frac{T_s}{W_T}
+  \label{eq:tau_T_d1}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $T_s$: torque de saída do redutor em \si{\newton\meter} \eqref{eq:torque_saida_redutor}.
+  \item $W_T$: módulo de resistência à torção em \si{\meter^3}.
+\end{itemize}
+
+\vspace{1em}
+
+O módulo de resistência à torção é dado por:
+
+\begin{equation}
+  W_T = \frac{\pi \cdot {d_1}^3}{16}
+  \label{eq:w_T_d1}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $d_1$: diâmetro do eixo em \si{\milli\meter} \eqref{eq:d_1_eixo_do_tambor}.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:w_T_d1}:
+
+\begin{align*}
+  W_T & = \frac{\pi \cdot {\left( 90 \cdot 10^{-3} \right)}^3}{16} \\
+  W_T & = \boxed{\SI{1.43e-4}{\meter^3}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tau_T_d1}:
+
+\begin{align*}
+  \tau_T & = \frac{\num{9150.44}}{\num{1.43e-4}} \\
+  \tau_T & = \boxed{\SI{63.99}{\mega\pascal}}
+\end{align*}
+
+\begin{itemize}
+  \item \textbf{Cortante}
+\end{itemize}
+
+A tensão de cisalhamento cortante é dada por:
+
+\begin{equation}
+  \tau_V = \frac{V_e}{A}
+  \label{eq:tau_V_d1}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $V_e$: força cortante no eixo em \si{\newton} (Tabela \ref{tab:dados_esforcos_tambor}).
+  \item $A$: área da seção transversal do eixo em \si{\meter^2}.
+\end{itemize}
+
+\vspace{1em}
+
+A área da seção transversal do eixo é dada por:
+
+\begin{equation}
+  A = \frac{\pi \cdot {d_1}^2}{4}
+  \label{eq:a_d1}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $d_1$: diâmetro do eixo em \si{\milli\meter} \eqref{eq:d_1_eixo_do_tambor}.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:a_d1}:
+
+\begin{align*}
+  A & = \frac{\pi \cdot {\left( 90 \cdot 10^{-3} \right)}^2}{4} \\
+  A & = \boxed{\SI{6.36e-3}{\meter^2}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tau_V_d1}:
+
+\begin{align*}
+  \tau_V & = \frac{\num{27682.54}}{\num{6.36e-3}} \\
+  \tau_V & = \boxed{\SI{5.8}{\mega\pascal}}
+\end{align*}
+
+\begin{itemize}
+  \item \textbf{Tensão combinada}
+\end{itemize}
+
+A tensão combinada é dada por:
+
+\begin{equation}
+  \sigma_c = \sqrt{{\sigma_f}^2 + 3 \left( \tau_T + \tau_V \right)^2}
+  \label{eq:sigma_c_d1}
+\end{equation}
+
+Substituindo os valores na equação \eqref{eq:sigma_c_d1}:
+
+\begin{align*}
+  \sigma_c & = \sqrt{\num{38.9}^2 + 3 \left( \num{63.99} + \num{5.8} \right)^2} \\
+  \sigma_c & = \boxed{\SI{126.99}{\mega\pascal}}
+\end{align*}
+
+Verificando a tensão combinada com a tensão admissível:
+
+\begin{align*}
+  \sigma_c                  & \leq \sigma_{\text{adm}}                             \\
+  \SI{126.99}{\mega\pascal} & \leq \SI{214.29}{\mega\pascal} \rightarrow \text{OK}
+\end{align*}
