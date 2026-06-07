@@ -2,7 +2,7 @@ As dimensões principais do tambor são representadas no esquema abaixo:
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/drawings/desenho_tambor.pdf}
+  \includegraphics[width=0.6\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/drawings/desenho_tambor.pdf}
   \caption{Representação das dimensões principais do tambor (Autor)}
   \label{fig:desenho_tambor}
 \end{figure}
@@ -32,7 +32,7 @@ O diâmetro nominal é dado por:
 \end{equation}
 
 \begin{align*}
-  D_n & = \num{307.94} + 2 \cdot 10               \\
+  D_n & = \num{307.94} + 2 \cdot 10         \\
   D_n & = \boxed{\SI{327.94}{\milli\meter}}
 \end{align*}
 
@@ -44,7 +44,7 @@ O diâmetro primitivo é dado por:
 \end{equation}
 
 \begin{align*}
-  D_t & = \num{327.94} + 2 \cdot 10               \\
+  D_t & = \num{327.94} + 2 \cdot 10         \\
   D_t & = \boxed{\SI{347.94}{\milli\meter}}
 \end{align*}
 
@@ -56,7 +56,7 @@ O diâmetro usinado é dado por:
 \end{equation}
 
 \begin{align*}
-  D_u & = \num{327.94} + 2 \cdot \num{7.5}            \\
+  D_u & = \num{327.94} + 2 \cdot \num{7.5}  \\
   D_u & = \boxed{\SI{342.94}{\milli\meter}}
 \end{align*}
 
@@ -68,7 +68,7 @@ O diâmetro do flange é dado por:
 \end{equation}
 
 \begin{align*}
-  D_f & = \num{355.6} + 3 \cdot 19               \\
+  D_f & = \num{355.6} + 3 \cdot 19         \\
   D_f & = \boxed{\SI{412.6}{\milli\meter}}
 \end{align*}
 
@@ -80,7 +80,7 @@ A espessura usinada do tambor é dada por:
 \end{equation}
 
 \begin{align*}
-  e_{\text{usinado}} & = \frac{\num{355.6} - \num{347.94}}{2} + 10  \\
+  e_{\text{usinado}} & = \frac{\num{355.6} - \num{347.94}}{2} + 10 \\
   e_{\text{usinado}} & = \boxed{\SI{13.83}{\milli\meter}}
 \end{align*}
 
@@ -121,14 +121,14 @@ Onde:
 Consultando as tabelas 24 e 25 da norma NBR 8400 \cite{nbr8400}, tem-se:
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/images/q_tambor.png}
+  \includegraphics[width=0.5\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/images/q_tambor.png}
   \caption{Coeficiente $q$ segundo a norma NBR 8400 \cite{nbr8400}}
   \label{fig:q_tambor}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/images/fsr_tambor.png}
+  \includegraphics[width=0.5\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/images/fsr_tambor.png}
   \caption{Coeficiente $FS_r$ segundo a norma NBR 8400 \cite{nbr8400}}
   \label{fig:fsr_tambor}
 \end{figure}
@@ -141,9 +141,9 @@ O grupo do mecanismo é 1AM e o caso de solicitação é II, definidos nos Dados
   \label{tab:q_fsr_tambor}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
-    Descrição          & Símbolo & Valor \\
+    Descrição          & Símbolo & Valor     \\
     \midrule
-    Coeficiente $q$    & $q$     & 1     \\
+    Coeficiente $q$    & $q$     & 1         \\
     Coeficiente $FS_r$ & $FS_r$  & \num{2.8} \\
     \bottomrule
   \end{tabularx}
@@ -176,14 +176,14 @@ Onde:
 Substituindo os valores na equação \eqref{eq:tensao_admissivel_tambor}:
 
 \begin{align*}
-  \sigma_{\text{adm}} & = \frac{415}{1 \cdot \num{2.8}}           \\
+  \sigma_{\text{adm}} & = \frac{415}{1 \cdot \num{2.8}}     \\
   \sigma_{\text{adm}} & = \boxed{\SI{148.21}{\mega\pascal}}
 \end{align*}
 
 Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_admissivel_tambor}:
 
 \begin{align*}
-  \tau_{\text{adm}} & = \frac{\num{148.21}}{\sqrt{3}}          \\
+  \tau_{\text{adm}} & = \frac{\num{148.21}}{\sqrt{3}}    \\
   \tau_{\text{adm}} & = \boxed{\SI{85.57}{\mega\pascal}}
 \end{align*}
 
@@ -195,17 +195,17 @@ Substituindo os valores na equação \eqref{eq:comprimento_total_tambor}:
 \end{align*}
 
 \subsection{Modelagem estática do tambor}
-\input{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/main}
+\input{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/main}
 
 \subsection{Torque de saída do redutor}
-\input{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/02_torque_de_saida_do_redutor/main}
+\input{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/02_torque_de_saida_do_redutor/main}
 
 \subsection{Verificação do corpo do tambor}
-\input{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/03_verificacao_do_corpo_do_tambor/main}
+\input{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/03_verificacao_do_corpo_do_tambor/main}
 
 \subsection{Verificação das ranhuras}
-\input{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/04_verificacao_das_ranhuras/main}
+\input{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/04_verificacao_das_ranhuras/main}
 
 \subsection{Eixo do tambor}
 
-\input{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/05_eixo_do_tambor/main}
+\input{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/05_eixo_do_tambor/main}

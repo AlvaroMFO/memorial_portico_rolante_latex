@@ -35,7 +35,7 @@ Onde:
 Substituindo os valores na equação \eqref{eq:velocidade_do_cabo}:
 
 \begin{align*}
-  V_{\text{cabo}} & = \frac{4}{2} \cdot \num{0.1}              \\
+  V_{\text{cabo}} & = \frac{4}{2} \cdot \num{0.1}         \\
   V_{\text{cabo}} & = \boxed{\SI{0.2}{\meter\per\second}}
 \end{align*}
 
@@ -95,7 +95,7 @@ Onde:
 Substituindo os valores na equação \eqref{eq:torque_acionamento}:
 
 \begin{align*}
-  T_1 & = \frac{9550 \cdot \num{10.96}}{1170}     \\
+  T_1 & = \frac{9550 \cdot \num{10.96}}{1170} \\
   T_1 & = \boxed{\SI{89.46}{\newton\meter}}
 \end{align*}
 
@@ -119,7 +119,7 @@ Onde:
 Substituindo os valores na equação \eqref{eq:torque_saida}:
 
 \begin{align*}
-  T_2 & = \num{89.46} \cdot \num{108.43}                \\
+  T_2 & = \num{89.46} \cdot \num{108.43}      \\
   T_2 & = \boxed{\SI{9700.15}{\newton\meter}}
 \end{align*}
 
@@ -129,21 +129,21 @@ Com base no catálogo de redutores da WEG Cestari, selecionou-se um redutor para
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/13_redutor_de_elevacao/images/redutor_catalogo.png}
+  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/03_conjunto_do_acionamento_do_sistema_de_elevacao/sections/04_redutor_de_elevacao/images/redutor_catalogo.png}
   \caption{Catálogo de redutores \cite[p.~63]{weg_cestari_redutores}}
   \label{fig:redutor_catalogo}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/13_redutor_de_elevacao/images/redutor_cotas.png}
+  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/03_conjunto_do_acionamento_do_sistema_de_elevacao/sections/04_redutor_de_elevacao/images/redutor_cotas.png}
   \caption{Desenho do redutor \cite[p.~154]{weg_cestari_redutores}}
   \label{fig:redutor_cotas}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/13_redutor_de_elevacao/images/redutor_dimensoes.png}
+  \includegraphics[width=1\textwidth]{content/sections/03_sistema_de_elevacao/sections/03_conjunto_do_acionamento_do_sistema_de_elevacao/sections/04_redutor_de_elevacao/images/redutor_dimensoes.png}
   \caption{Dimensões do redutor \cite[p.~155]{weg_cestari_redutores}}
   \label{fig:redutor_dimensoes}
 \end{figure}
@@ -166,7 +166,7 @@ Com base no catálogo de redutores da WEG Cestari, selecionou-se um redutor para
     Diâmetro do eixo de saída     & $\varnothing DS$        & \SI{130}{\milli\meter}      \\
     Massa                         & $M_{\text{redutor}}$    & \SI{552}{\kilo\gram}        \\
     Força radial de saída         & $F_r$                   & \SI{88}{\kilo\newton}       \\
-    Rendimento                    & $\eta_{\text{redutor}}$ & \num{0.94}                       \\
+    Rendimento                    & $\eta_{\text{redutor}}$ & \num{0.94}                  \\
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -174,8 +174,8 @@ Com base no catálogo de redutores da WEG Cestari, selecionou-se um redutor para
 Avaliando o redutor adotado com base no fator de segurança:
 
 \begin{align*}
-  M_2                         & \ge T_2 \cdot FS \cdot \num{1.43}                                      \\
-  28                          & \ge \num{9700.15} \cdot 10^{-3} \cdot \num{1.25} \cdot \num{1.43}              \\
+  M_2                         & \ge T_2 \cdot FS \cdot \num{1.43}                                 \\
+  28                          & \ge \num{9700.15} \cdot 10^{-3} \cdot \num{1.25} \cdot \num{1.43} \\
   \SI{28}{\kilo\newton\meter} & \ge \boxed{\SI{17.34}{\kilo\newton\meter}} \rightarrow \text{OK}
 \end{align*}
 
@@ -193,11 +193,11 @@ Com base no catálogo da WEG Cestari, os fatores de correção são:
   \caption{Fatores de correção para potência térmica \cite[p.~9]{weg_cestari_redutores}}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
-    Descrição                     & Símbolo & Valor    \\
+    Descrição                     & Símbolo & Valor        \\
     \midrule
-    Fator de temperatura ambiente & $f_a$   & 0,71     \\
-    Fator de ambiente             & $f_c$   & $1$      \\
-    Fator de altitude             & $f_h$   & 0,95     \\
+    Fator de temperatura ambiente & $f_a$   & 0,71         \\
+    Fator de ambiente             & $f_c$   & $1$          \\
+    Fator de altitude             & $f_h$   & 0,95         \\
     Fator de temperatura do óleo  & $f_t$   & $\num{1.07}$ \\
     Fator de tempo de operação    & $f_b$   & $\num{1.35}$ \\
     \bottomrule
@@ -213,6 +213,6 @@ Substituindo os valores na equação \eqref{eq:potencia_termica_corrigida}:
 Verificando a potência térmica corrigida:
 
 \begin{align*}
-  P_T                      & > P_R                                            \\
+  P_T                    & > P_R                                          \\
   \SI{73.07}{\kilo\watt} & > \SI{10.96}{\kilo\watt} \rightarrow \text{OK}
 \end{align*}

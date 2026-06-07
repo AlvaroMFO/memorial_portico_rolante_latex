@@ -2,7 +2,7 @@ A montagem do tambor, com os esforços atuantes está ilustrada abaixo:
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/tambor_redutor.pdf}
+  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/tambor_redutor.pdf}
   \caption{Representação da montagem do tambor com o redutor (Autor)}
   \label{fig:montagem_tambor}
 \end{figure}
@@ -11,7 +11,7 @@ A estrutura do tambor pode ser modelada como uma viga bi apoiada, com o peso do 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/modelagem_tambor.pdf}
+  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/modelagem_tambor.pdf}
   \caption{Modelagem estática do tambor (Autor)}
   \label{fig:modelagem_tambor}
 \end{figure}
@@ -34,7 +34,7 @@ A carga distribuída considerada na modelagem estática é dada por:
 \end{equation}
 
 \begin{align*}
-  q_o & = \frac{\num{6611.85} + \num{978.48}}{\num{2.212}}     \\
+  q_o & = \frac{\num{6611.85} + \num{978.48}}{\num{2.212}} \\
   q_o & = \boxed{\SI{3431.4}{\newton\per\meter}}
 \end{align*}
 
@@ -46,10 +46,10 @@ As cargas atuantes consideradas no dimensionamento do tambor estão resumidas ab
   \label{tab:cargas_atuantes_tambor}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
-    Descrição                          & Símbolo                  & Valor                            \\
+    Descrição                          & Símbolo                  & Valor                          \\
     \midrule
     Tração no cabo de aço              & $T$                      & \SI{25377.8}{\newton}          \\
-    Peso do acoplamento redutor-tambor & $G_{\text{acoplamento}}$ & \SI{540}{\newton}                \\
+    Peso do acoplamento redutor-tambor & $G_{\text{acoplamento}}$ & \SI{540}{\newton}              \\
     Peso do tambor                     & $G_{\text{tambor}}$      & \SI{6611.85}{\newton}          \\
     Peso do cabo de aço                & $G_{\text{cabo}}$        & \SI{978.48}{\newton}           \\
     Carga distribuída                  & $q_o$                    & \SI{3431.4}{\newton\per\meter} \\
@@ -67,9 +67,9 @@ As distâncias consideradas na modelagem estática são:
   \label{tab:distancias_consideradas_modelagem_estatica}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
-    Descrição                             & Símbolo            & Valor                \\
+    Descrição                             & Símbolo            & Valor              \\
     \midrule
-    Espaçamento central entre as ranhuras & $L_2$              & \SI{0.2}{\meter}    \\
+    Espaçamento central entre as ranhuras & $L_2$              & \SI{0.2}{\meter}   \\
     Comprimento do tambor                 & $L_t$              & \SI{2.112}{\meter} \\
     Comprimento total                     & $L_{\text{total}}$ & \SI{2.212}{\meter} \\
     \bottomrule
@@ -82,7 +82,7 @@ Com base nas cargas e distâncias consideradas, o diagrama de corpo livre (DCL) 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/dcl_tambor.pdf}
+  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/dcl_tambor.pdf}
   \caption{DCL do tambor (Autor)}
   \label{fig:dcl_tambor}
 \end{figure}
@@ -118,7 +118,7 @@ Os momentos atuantes no ponto A são:
 Aplicando nas equações de equilíbrio, tem-se:
 
 \begin{flalign*}
-   & \sum M_A = 0                                                     &  & \\
+   & \sum M_A = 0                                                                         &  & \\
    & \num{2.212} R_B - \num{8394.9} - \num{26798.96} - \num{31874.52} - \num{1194.48} = 0 &  &
 \end{flalign*}
 
@@ -130,7 +130,7 @@ Aplicando nas equações de equilíbrio, tem-se:
 \vspace{1em}
 
 \begin{flalign*}
-   & \sum F_y = 0                                                      &  & \\
+   & \sum F_y = 0                                                                  &  & \\
    & R_A + R_B - \num{3431.43} \cdot \num{2.212} - 2 \cdot \num{25377.8} - 540 = 0 &  &
 \end{flalign*}
 
@@ -144,7 +144,7 @@ Aplicando nas equações de equilíbrio, tem-se:
 Desenvolvendo a equação \eqref{eq:sum_ma_tambor}, tem-se:
 
 \begin{align*}
-  R_B & = \frac{\num{68262.86}}{\num{2.212}}       \\
+  R_B & = \frac{\num{68262.86}}{\num{2.212}} \\
   R_B & = \boxed{\SI{30860.24}{\newton}}
 \end{align*}
 
@@ -153,7 +153,7 @@ Desenvolvendo a equação \eqref{eq:sum_ma_tambor}, tem-se:
 Substituindo o valor de $R_B$ na equação \eqref{eq:sum_fy_tambor}, tem-se:
 
 \begin{align*}
-  R_A & = \num{58885.92} - \num{30860.24}          \\
+  R_A & = \num{58885.92} - \num{30860.24} \\
   R_A & = \boxed{\SI{28025.68}{\newton}}
 \end{align*}
 
@@ -164,12 +164,12 @@ Substituindo o valor de $R_B$ na equação \eqref{eq:sum_fy_tambor}, tem-se:
 Para obter as equações dos esforços internos de força cortante e momento fletor, utilizou-se o método das funções de singularidade de Macaulay.
 
 \begin{align*}
-  V(x) & = -\num{3431.43} \left<x\right>^1 + \num{28025.68} \left<x\right>^0 - \num{25377.8} \left<x - \num{1.056}\right>^0 \rightarrow                                    \\
+  V(x) & = -\num{3431.43} \left<x\right>^1 + \num{28025.68} \left<x\right>^0 - \num{25377.8} \left<x - \num{1.056}\right>^0 \rightarrow                                        \\
        & \quad - \num{25377.8} \left<x - \num{1.256}\right>^0 - 540 \left<x - \num{2.212}\right>^0 - \num{30860.24} \left<x - \num{2.212}\right>^0 \left[ \si{\newton} \right]
 \end{align*}
 
 \begin{align*}
-  M(x) & = -\frac{\num{3431.43}}{2} \left<x\right>^2 + \num{28025.68} \left<x\right>^1 - \num{25377.8} \left<x - \num{1.056}\right>^1 \rightarrow                                \\
+  M(x) & = -\frac{\num{3431.43}}{2} \left<x\right>^2 + \num{28025.68} \left<x\right>^1 - \num{25377.8} \left<x - \num{1.056}\right>^1 \rightarrow                                    \\
        & \quad - \num{25377.8} \left<x - \num{1.256}\right>^1 - 540 \left<x - \num{2.212}\right>^1 - \num{30860.24} \left<x - \num{2.212}\right>^1 \left[ \si{\newton\meter} \right]
 \end{align*}
 
@@ -178,7 +178,7 @@ Desenvolvendo as funções de singularidade, é possível extrair as equações 
 \[
   V(x) =
   \begin{cases}
-    -\num{3431.43} x + \num{28025.68} & 0 \le x \le \SI{1.056}{\meter}                    \\
+    -\num{3431.43} x + \num{28025.68} & 0 \le x \le \SI{1.056}{\meter}                  \\
     -\num{3431.43} x + \num{2647.88}  & \SI{1.056}{\meter} \le x \le \SI{1.256}{\meter} \\
     -\num{3431.43} x - \num{22729.92} & \SI{1.256}{\meter} \le x \le \SI{2.212}{\meter}
   \end{cases}
@@ -188,7 +188,7 @@ Desenvolvendo as funções de singularidade, é possível extrair as equações 
 \[
   M(x) =
   \begin{cases}
-    -\num{1715.72} x^2 + \num{28025.68} x              & 0 \le x \le \SI{1.056}{\meter}                    \\
+    -\num{1715.72} x^2 + \num{28025.68} x                  & 0 \le x \le \SI{1.056}{\meter}                  \\
     -\num{1715.72} x^2 + \num{2647.88} x + \num{26798.96}  & \SI{1.056}{\meter} \le x \le \SI{1.256}{\meter} \\
     -\num{1715.72} x^2 - \num{22729.92} x + \num{58673.47} & \SI{1.256}{\meter} \le x \le \SI{2.212}{\meter}
   \end{cases}
@@ -201,7 +201,7 @@ Aplicando as equações ao longo do comprimento da viga, tem-se o seguinte diagr
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/16_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/diagrama_tambor.pdf}
+  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/01_modelagem_estatica_do_tambor/drawings/diagrama_tambor.pdf}
   \caption{Diagrama de esforços internos do tambor (Autor)}
   \label{fig:diagrama_tambor}
 \end{figure}
@@ -216,7 +216,7 @@ Assim, é possível extrair os valores de momento fletor máximo e de força cor
   \label{tab:dados_esforcos_tambor}
   \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
-    Descrição                        & Símbolo   & Valor                          \\
+    Descrição                        & Símbolo   & Valor                        \\
     \midrule
     Momento fletor máximo no tambor  & $M_{f_t}$ & \SI{27681.86}{\newton\meter} \\
     Força cortante máxima no tambor  & $V_t$     & \SI{30320.24}{\newton}       \\
