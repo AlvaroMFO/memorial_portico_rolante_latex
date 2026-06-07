@@ -75,7 +75,7 @@
 \setlength{\headwidth}{\textwidth}
 
 \newcommand{\cabecalhosecao}{}
-\renewcommand{\chaptermark}[1]{\gdef\cabecalhosecao{#1}}
+\renewcommand{\chaptermark}[1]{\gdef\cabecalhosecao{\chaptertitlename\ \thechapter\ \text{–} #1}}
 
 \newcommand{\cabecalhologoaltura}{1cm}
 \newcommand{\cabecalhologolargura}{2.2cm}
@@ -211,6 +211,8 @@
 \chapter{Trilhos e Rodas}
 \input{content/appendices/c_trilhos_e_rodas/main}
 
+\clearpage
+\gdef\cabecalhosecao{\bibname}
 \bibliographystyle{abntex2-alf}
 \bibliography{content/references/referencias}
 
