@@ -1,3 +1,10 @@
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{content/sections/03_sistema_de_elevacao/sections/04_projeto_do_tambor/sections/05_eixo_do_tambor/drawings/eixo_tambor.pdf}
+  \caption{Representação do eixo do tambor (Autor)}
+  \label{fig:eixo_tambor}
+\end{figure}
+
 O material utilizado para a fabricação do eixo do tambor é o aço SAE 1045, cujas tensões admissíveis são:
 
 \begin{table}[H]
@@ -18,7 +25,7 @@ A tensão de flexão admissível do eixo do tambor é dada pela equação \eqref
 
 Substituindo os valores na equação \eqref{eq:tensao_admissivel_tambor}:
 \begin{align*}
-  \sigma_{\text{adm}} & = \frac{600}{1 \cdot \num{2.8}}           \\
+  \sigma_{\text{adm}} & = \frac{600}{1 \cdot \num{2.8}}     \\
   \sigma_{\text{adm}} & = \boxed{\SI{214.29}{\mega\pascal}}
 \end{align*}
 
@@ -27,7 +34,7 @@ A tensão de cisalhamento admissível do eixo do tambor é dada pela equação \
 Substituindo os valores na equação \eqref{eq:tensao_cisalhamento_admissivel_tambor}:
 
 \begin{align*}
-  \tau_{\text{adm}} & = \frac{600}{\sqrt{3}}                \\
+  \tau_{\text{adm}} & = \frac{600}{\sqrt{3}}              \\
   \tau_{\text{adm}} & = \boxed{\SI{123.72}{\mega\pascal}}
 \end{align*}
 
@@ -142,7 +149,7 @@ Define-se que a tensão combinada deve ser menor ou igual à tensão de flexão 
   \sigma_c \le \sigma_{\text{adm}}
 \end{equation*}
 
-Com isso, é possível obter a equação para calcular o diâmetro do eixo do tambor:
+Com isso, é possível obter a equação para calcular o diâmetro mínimo do eixo do tambor:
 
 \begin{align*}
    & \sigma_{\text{adm}} = \frac{M_c}{W_f}                                        \\
@@ -174,6 +181,38 @@ Substituindo os valores na equação \eqref{eq:diametro_eixo_do_tambor}:
 
 \begin{align*}
   d_{\text{eixo}} & = \num{2.17} \cdot \sqrt[3]{\frac{\num{8399.79}}{\num{214.29} \cdot 10^6}} \\
-  d_{\text{eixo}} & = \SI{0.07371}{\meter}                                        \\
+  d_{\text{eixo}} & = \SI{0.07371}{\meter}                                                     \\
   d_{\text{eixo}} & = \boxed{\SI{73.71}{\milli\meter}}
+\end{align*}
+
+Com base no diâmetro mínimo calculado, é possível definir as dimensões representadas na Figura \ref{fig:eixo_tambor}.
+
+\begin{equation}
+  d_1 = \num{1.2} \cdot d_{\text{eixo}}
+  \label{eq:d_1_eixo_do_tambor}
+\end{equation}
+
+\begin{equation}
+  d_e = d_1 - 20 \left[ \si{\milli\meter} \right]
+  \label{eq:d_e_eixo_do_tambor}
+\end{equation}
+
+\begin{equation}
+  d = d_e - 10 \left[ \si{\milli\meter} \right]
+  \label{eq:d_eixo_do_tambor}
+\end{equation}
+
+Para o raio $r$, utilizou-se \SI{1.5}{\milli\meter}.
+
+Substituindo os valores na equação \eqref{eq:d_1_eixo_do_tambor}:
+\begin{align*}
+  d_1 & = \num{1.2} \cdot \num{73.71}         \\
+  d_1 & = \SI{88.45}{\milli\meter}            \\
+  d_1 & \approx \boxed{\SI{90}{\milli\meter}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:d_e_eixo_do_tambor}:
+\begin{align*}
+  d_e & = \SI{90}{\milli\meter} - 20    \\
+  d_e & = \boxed{\SI{70}{\milli\meter}}
 \end{align*}
