@@ -109,13 +109,13 @@ def main():
             )
             inserted_count += 1
 
-    if inserted_count == 0:
-        raise RuntimeError("OCR nao retornou texto para inserir no PDF.")
-
     doc.save(output_path)
     doc.close()
 
-    print(f"PDF pesquisável gerado com sucesso: {output_path} ({inserted_count} textos OCR)")
+    if inserted_count == 0:
+        print(f"PDF gerado sem camada de texto OCR: {output_path}")
+    else:
+        print(f"PDF pesquisável gerado com sucesso: {output_path} ({inserted_count} textos OCR)")
 
 
 if __name__ == "__main__":
