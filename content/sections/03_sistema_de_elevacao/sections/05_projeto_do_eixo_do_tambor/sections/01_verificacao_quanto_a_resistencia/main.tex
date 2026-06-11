@@ -1,4 +1,4 @@
-\subsubsection{Diâmetro ($d_1$)}
+\subsubsection{Diâmetro ($d_1 = \SI{90}{\milli\meter}$)}
 
 \begin{itemize}
   \item \textbf{Flexão}
@@ -99,13 +99,13 @@ Substituindo os valores na equação \eqref{eq:tau_T_d1}:
 \end{align*}
 
 \begin{itemize}
-  \item \textbf{Cortante}
+  \item \textbf{Cisalhamento}
 \end{itemize}
 
 A tensão de cisalhamento cortante é dada por:
 
 \begin{equation}
-  \tau_V = \frac{V_e}{A}
+  \tau_V = \frac{4}{3} \cdot \frac{V_e}{A}
   \label{eq:tau_V_d1}
 \end{equation}
 
@@ -143,7 +143,7 @@ Substituindo os valores na equação \eqref{eq:a_d1}:
 Substituindo os valores na equação \eqref{eq:tau_V_d1}:
 
 \begin{align*}
-  \tau_V & = \frac{\num{27682.54}}{\num{6.36e-3}} \\
+  \tau_V & = \frac{4}{3} \cdot \frac{\num{27682.54}}{\num{6.36e-3}} \\
   \tau_V & = \boxed{\SI{5.8}{\mega\pascal}}
 \end{align*}
 
@@ -170,4 +170,153 @@ Verificando a tensão combinada com a tensão admissível:
 \begin{align*}
   \sigma_c                  & \leq \sigma_{\text{adm}}                             \\
   \SI{126.99}{\mega\pascal} & \leq \SI{214.29}{\mega\pascal} \rightarrow \text{OK}
+\end{align*}
+
+\subsubsection{Diâmetro do assento ($d = \SI{60}{\milli\meter}$)}
+
+\begin{itemize}
+  \item \textbf{Torção}
+\end{itemize}
+
+A tensão de cisalhamento por torção é dada por:
+
+\begin{equation}
+  \tau_T = \frac{T_s}{W_T}
+  \label{eq:tau_T_d}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $T_s$: torque de saída do redutor em \si{\newton\meter} \eqref{eq:torque_saida_redutor}.
+  \item $W_T$: módulo de resistência à torção em \si{\meter^3}.
+\end{itemize}
+
+\vspace{1em}
+
+O módulo de resistência à torção é dado por:
+
+\begin{equation}
+  W_T = \frac{\pi \cdot {d}^3}{16}
+  \label{eq:w_T_d}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $d$: diâmetro do assento em \si{\milli\meter} \eqref{eq:d_eixo_do_tambor}.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:w_T_d}:
+
+\begin{align*}
+  W_T & = \frac{\pi \cdot {\left( 60 \cdot 10^{-3} \right)}^3}{16} \\
+  W_T & = \boxed{\SI{4.24e-5}{\meter^3}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tau_T_d}:
+
+\begin{align*}
+  \tau_T & = \frac{\num{9150.44}}{\num{4.24e-5}} \\
+  \tau_T & = \boxed{\SI{215.81}{\mega\pascal}}
+\end{align*}
+
+\begin{itemize}
+  \item \textbf{Cisalhamento}
+\end{itemize}
+
+A tensão de cisalhamento cortante é dada por:
+
+\begin{equation}
+  \tau_V = \frac{4}{3} \cdot \frac{V_e}{A}
+  \label{eq:tau_V_d}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $V_e$: força cortante no eixo em \si{\newton} (Tabela \ref{tab:dados_esforcos_tambor}).
+  \item $A$: área da seção transversal do eixo em \si{\meter^2}.
+\end{itemize}
+
+\vspace{1em}
+
+A área da seção transversal do eixo é dada por:
+
+\begin{equation}
+  A = \frac{\pi \cdot {d}^2}{4}
+  \label{eq:a_d}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $d$: diâmetro do assento em \si{\milli\meter} \eqref{eq:d_eixo_do_tambor}.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:a_d}:
+
+\begin{align*}
+  A & = \frac{\pi \cdot {\left( 60 \cdot 10^{-3} \right)}^2}{4} \\
+  A & = \boxed{\SI{2.83e-3}{\meter^2}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:tau_V_d}:
+
+\begin{align*}
+  \tau_V & = \frac{4}{3} \cdot \frac{\num{27682.54}}{\num{2.83e-3}} \\
+  \tau_V & = \boxed{\SI{13.04}{\mega\pascal}}
+\end{align*}
+
+\begin{itemize}
+  \item \textbf{Tensão combinada}
+\end{itemize}
+
+Verificando as tensões de cisalhamento com a tensão admissível:
+
+\begin{align*}
+  \tau_T + \tau_V                                      & \leq \tau_{\text{adm}}                                   \\
+  \SI{215.81}{\mega\pascal} + \SI{13.04}{\mega\pascal} & > \SI{214.29}{\mega\pascal} \rightarrow \text{Reprovado}
+\end{align*}
+
+Devido às tensões de cisalhamento serem maiores que a tensão admissível, é necessário aumentar o diâmetro do eixo para $d_1 = \SI{100}{\milli\meter}$.
+
+\begin{table}[H]
+  \centering
+  \caption{Diâmetros do eixo do tambor corrigidos}
+  \label{tab:diametros_eixo_do_tambor_corrigidos}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Descrição                        & Símbolo & Valor                  \\
+    \midrule
+    Diâmetro do eixo                 & $d_1$   & \SI{100}{\milli\meter} \\
+    Diâmetro do encosto do rolamento & $d_e$   & \SI{80}{\milli\meter}  \\
+    Diâmetro do assento              & $d$     & \SI{70}{\milli\meter}  \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Recalculando as tensões para o novo diâmetro do eixo:
+
+\begin{align*}
+  \sigma_f & = \num{2785.41} \cdot \frac{32}{\pi \cdot \num{0.1}^3} \\
+  \sigma_f & = \boxed{\SI{28.37}{\mega\pascal}}
+\end{align*}
+
+\begin{align*}
+  \tau_T & = \num{9150.44} \cdot \frac{16}{\pi \cdot \num{0.1}^3} \\
+  \tau_T & = \boxed{\SI{46.6}{\mega\pascal}}
+\end{align*}
+
+\begin{align*}
+  \tau_V & = \frac{4}{3} \cdot \frac{\num{27682.54}}{\pi \cdot \num{0.1}^2} \\
+  \tau_V & = \boxed{\SI{3.51}{\mega\pascal}}
+\end{align*}
+
+\begin{align*}
+  \sigma_c & = \sqrt{\num{28.37}^2 + 3 \left( \num{15.39} + \num{3.51} \right)^2} \\
 \end{align*}
