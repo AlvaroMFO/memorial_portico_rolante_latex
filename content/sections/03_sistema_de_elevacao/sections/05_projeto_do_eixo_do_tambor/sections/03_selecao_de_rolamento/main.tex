@@ -105,3 +105,50 @@ A carga dinâmica equivalente é dada pela equação:
     \num{0.67} \cdot F_R + Y_2 \cdot F_A & \frac{F_A}{F_R} > e    \\
   \end{cases}
 \]
+
+\begin{align*}
+  \frac{F_A}{F_R} & = \frac{\num{5.61}}{\num{28.03}} \\
+  \frac{F_A}{F_R} & = \num{0.20} \leq e
+\end{align*}
+
+Portanto, a carga dinâmica equivalente é dada por:
+
+\begin{equation}
+  P = F_R + Y_1 \cdot F_A
+  \label{eq:carga_dinamica_equivalente}
+\end{equation}
+
+\begin{align*}
+  P & = \num{28.03} + \num{2.9} \cdot \num{5.61} \\
+  P & = \boxed{\SI{44.3}{\kilo\newton}}
+\end{align*}
+
+A vida útil do rolamento é dada pela equação:
+
+\begin{equation}
+  L_{10_h} = \frac{10^6}{60 \cdot n} \cdot \left( \frac{C}{P} \right)^{10/3}
+  \label{eq:vida_util_rolamento}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $L_{10_h}$: vida útil do rolamento em \si{\hour}.
+  \item $n$: rotação do tambor em \si{\rpm} \eqref{eq:rotacao_do_tambor}.
+  \item $C$: carga dinâmica do rolamento em \si{\kilo\newton}.
+  \item $P$: carga dinâmica equivalente do rolamento em \si{\kilo\newton}.
+\end{itemize}
+
+Substituindo os valores na equação \ref{eq:vida_util_rolamento}:
+
+\begin{align*}
+  L_{10_h} & = \frac{10^6}{60 \cdot \num{10.79}} \cdot \left( \frac{\num{208}}{\num{44.3}} \right)^{\frac{10}{3}} \\
+  L_{10_h} & = \boxed{\SI{267727}{\hour}}
+\end{align*}
+
+Verificando a condição de vida útil com base no requisito de 3200 horas (Tabela \ref{tab:dados_do_projeto}):
+
+\begin{align*}
+  L_{10_h}           & \geq 3200 \text{ h}                       \\
+  \SI{267727}{\hour} & \geq 3200 \text{ h} \rightarrow \text{OK}
+\end{align*}
