@@ -183,7 +183,186 @@ Os momentos atuantes no ponto N são:
 
 Como o sistema é hiperestático, é necessário utilizar o método das funções de singularidade para obter a equação do momento fletor e integrar duas vezes para obter as equações da declividade e da linha elástica, assim se obtém as equações necessárias para concluir o cálculo das reações de apoio.
 
+Relacionando o momento fletor com a equação da linha elástica temos:
+
+\begin{equation*}
+  EI \frac{d^2\nu}{dx^2} = M(x)
+\end{equation*}
+
+A função de singularidade do momento fletor é dada por:
+
 \begin{align*}
-  M(x) & = R_N \left<x\right>^1 - M_N \left<x\right>^0 -\num{53155.6} \left<x - \num{1.2185}\right>^1 - \num{1580} \left<x - \num{1.747}\right>^1 \rightarrow         \\
-       & \quad - \num{540} \left<x - \num{2.437}\right>^1 + R_M \left<x - \num{2.437}\right>^0 + M_M \left<x - \num{2.437}\right>^0 \left[ \si{\newton\meter} \right]
+  EI \frac{d^2\nu}{dx^2} & = R_N \left<x\right>^1 - M_N \left<x\right>^0 -\num{53155.6} \left<x - \num{1.2185}\right>^1 - \num{1580} \left<x - \num{1.747}\right>^1 \rightarrow \\
+                         & \quad - \num{540} \left<x - \num{2.437}\right>^1 + R_M \left<x - \num{2.437}\right>^0 + M_M \left<x - \num{2.437}\right>^0
 \end{align*}
+
+Resolvendo a primeira integral:
+
+\begin{align*}
+  EI \int \frac{d^2\nu}{dx^2} & = \int R_N \left<x\right>^1 - M_N \left<x\right>^0 -\num{53155.6} \left<x - \num{1.2185}\right>^1 - \num{1580} \left<x - \num{1.747}\right>^1 \rightarrow \\
+                              & \quad - \num{540} \left<x - \num{2.437}\right>^1 + R_M \left<x - \num{2.437}\right>^1 + M_M \left<x - \num{2.437}\right>^0 \ dx
+\end{align*}
+
+\begin{align*}
+  EI \frac{d\nu}{dx} & = \frac{R_N}{2} \left<x\right>^2 - M_N \left<x\right>^1 -\frac{\num{53155.6}}{2} \left<x - \num{1.2185}\right>^2 - \frac{\num{1580}}{2} \left<x - \num{1.747}\right>^2 \rightarrow     \\
+                     & \quad - \frac{\num{540}}{2} \left<x - \num{2.437}\right>^2 + \frac{R_M}{2} \left<x - \num{2.437}\right>^2 + M_M \left<x - \num{2.437}\right>^1 + C_1 = EI \theta(x) = \left( * \right)
+\end{align*}
+
+Resolvendo a segunda integral:
+
+\begin{align*}
+  EI \int \frac{d\nu}{dx} & = \int \frac{R_N}{2} \left<x\right>^2 - M_N \left<x\right>^1 -\frac{\num{53155.6}}{2} \left<x - \num{1.2185}\right>^2 - \frac{\num{1580}}{2} \left<x - \num{1.747}\right>^2 \rightarrow \\
+                          & \quad - \frac{\num{540}}{2} \left<x - \num{2.437}\right>^2 + \frac{R_M}{2} \left<x - \num{2.437}\right>^2 + M_M \left<x - \num{2.437}\right>^1 + C_1 \ dx
+\end{align*}
+
+\begin{align*}
+  EI \nu(x) & = \frac{R_N}{6} \left<x\right>^3 - \frac{M_N}{2} \left<x\right>^2 -\frac{\num{53155.6}}{6} \left<x - \num{1.2185}\right>^3 - \frac{\num{1580}}{6} \left<x - \num{1.747}\right>^3 \rightarrow \\
+            & \quad - \frac{\num{540}}{6} \left<x - \num{2.437}\right>^3 + \frac{R_M}{6} \left<x - \num{2.437}\right>^3 + \frac{M_M}{2} \left<x - \num{2.437}\right>^2 + C_1 x + C_2 = \left( ** \right)
+\end{align*}
+
+Para encontrar as constantes de integração, é necessário aplicar as condições de contorno:
+
+\begin{itemize}
+  \item $x = 0$ \hspace{1em} $\theta = 0$ \hspace{1em} Eq. $\left( * \right)$: $\boxed{C_1 = 0}$
+  \item $x = 0$ \hspace{1em} $\nu = 0$ \hspace{1em} Eq. $\left( ** \right)$: $\boxed{C_2 = 0}$
+  \item $x = \SI{2.437}{\meter}$ \hspace{1em} $\theta = 0$ \hspace{1em} Eq. $\left( * \right)$:
+\end{itemize}
+
+\begin{align*}
+  0 & = \frac{R_N}{2} \left<\num{2.437}\right>^2 - M_N \left<\num{2.437}\right>^1 -\frac{\num{53155.6}}{2} \left<\num{2.437} - \num{1.2185}\right>^2 - \frac{\num{1580}}{2} \left<\num{2.437} - \num{1.747}\right>^2 \rightarrow \\
+    & \quad - \frac{\num{540}}{2} \left<\num{2.437} - \num{2.437}\right>^2 + \frac{R_M}{2} \left<\num{2.437} - \num{2.437}\right>^2 + M_M \left<\num{2.437} - \num{2.437}\right>^1
+\end{align*}
+
+\begin{equation*}
+  0 = \frac{R_N}{2} \left( \num{2.437} \right)^2 - M_N \left( \num{2.437} \right) -\frac{\num{53155.6}}{2} \left( \num{1.2185} \right)^2 - \frac{\num{1580}}{2} \left( \num{0.69} \right)^2 - \frac{\num{540}}{2} \cdot 0 + \frac{R_M}{2} \cdot 0 + M_M \cdot 0
+\end{equation*}
+
+\begin{equation}
+  \num{2.97} R_N - \num{2.437} M_N - \num{39837.3} = 0
+  \label{eq:cond_contorno_theta_vl2}
+\end{equation}
+
+\begin{itemize}
+  \item $x = \SI{2.437}{\meter}$ \hspace{1em} $\nu = 0$ \hspace{1em} Eq. $\left( ** \right)$:
+\end{itemize}
+
+\begin{align*}
+  0 & = \frac{R_N}{6} \left< \num{2.437} \right>^3 - \frac{M_N}{2} \left< \num{2.437} \right>^2 -\frac{\num{53155.6}}{6} \left< \num{2.437} - \num{1.2185} \right>^3 \rightarrow                                      \\
+    & \quad - \frac{\num{1580}}{6} \left< \num{2.437} - \num{1.747} \right>^3 - \frac{\num{540}}{6} \left< \num{2.437} - \num{2.437} \right>^3 + \frac{R_M}{6} \left< \num{2.437} - \num{2.437} \right>^3 \rightarrow \\
+    & \quad + \frac{M_M}{2} \left< \num{2.437} - \num{2.437} \right>^2
+\end{align*}
+
+\begin{align*}
+  0 & = \frac{R_N}{6} \left( \num{2.437} \right)^3 - \frac{M_N}{2} \left( \num{2.437} \right)^2 -\frac{\num{53155.6}}{6} \left( \num{1.2185} \right)^3 - \frac{\num{1580}}{6} \left( \num{0.69} \right)^3 \rightarrow \\
+    & \quad - \frac{\num{540}}{6} \cdot 0 + \frac{R_M}{6} \cdot 0 + \frac{M_M}{2} \cdot 0
+\end{align*}
+
+\begin{equation}
+  \num{2.412} R_N - \num{2.97} M_N - \num{16114.32} = 0
+  \label{eq:cond_contorno_nu_vl2}
+\end{equation}
+
+Resolvendo as equações \eqref{eq:cond_contorno_theta_vl2} e \eqref{eq:cond_contorno_nu_vl2}:
+
+\begin{align*}
+  - \num{2.437} M_N & = -\num{2.97} R_N + \num{39837.3}                            \\
+  M_N               & = \frac{\num{2.97}}{2.437} R_N - \frac{\num{39837.3}}{2.437} \\
+  M_N               & = \num{1.219} R_N - \num{16346.74}
+\end{align*}
+
+Substituindo $M_N$ na equação \eqref{eq:cond_contorno_nu_vl2}:
+
+\begin{equation*}
+  \num{2.412} R_N - \num{2.97} \left( \num{1.219} R_N - \num{16346.74} \right) - \num{16114.32} = 0
+\end{equation*}
+
+\begin{equation*}
+  - \num{1.208} R_N + \num{32435.5} = 0
+\end{equation*}
+
+\begin{align*}
+  R_N & = \frac{\num{32435.5}}{\num{1.208}} \\
+  R_N & = \boxed{\SI{26850.58}{\newton}}
+\end{align*}
+
+\begin{align*}
+  M_N & = \num{1.219} \cdot \num{26850.58} - \num{16346.74} \\
+  M_N & = \boxed{\SI{16384.12}{\newton\meter}}
+\end{align*}
+
+Substituindo $R_N$ na equação \eqref{eq:sum_fy_vl2}:
+
+\begin{align*}
+  R_M & = \num{55275.6} - \num{26850.58} \\
+  R_M & = \boxed{\SI{28425.02}{\newton}}
+\end{align*}
+
+Substituindo $R_N$ e $R_M$ na equação \eqref{eq:sum_mn_vl2}:
+
+\begin{align*}
+  M_M & = \num{16384.12} + \num{28425.02} \cdot \num{2.437} - \num{68846.34} \\
+  M_M & = \boxed{\SI{16809.55}{\newton\meter}}
+\end{align*}
+
+Com as reações de apoio obtidas, é possível definir as equações de esforço cortante e momento fletor para a viga VL2:
+
+\begin{align*}
+  V(x) & = \num{28850.58} \left<x\right>^0 - \num{53155.6} \left<x - \num{1.2185}\right>^0 - \num{1580} \left<x - \num{1.747}\right>^0 - \num{540} \left<x - \num{2.437}\right>^0  \rightarrow \\
+       & \quad + \num{28425.02} \left<x - \num{2.437}\right>^0
+\end{align*}
+
+\begin{align*}
+  M(x) & = -\num{16384.12} \left<x\right>^0 + \num{26850.58} \left<x\right>^1 - \num{53155.6} \left<x - \num{1.2185}\right>^1 - \num{1580} \left<x - \num{1.747}\right>^1 \rightarrow \\
+       & \quad - \num{540} \left<x - \num{2.437}\right>^1  + \num{28425.02} \left<x - \num{2.437}\right>^1 + \num{16809.55} \left<x - \num{2.437}\right>^0
+\end{align*}
+
+Desenvolvendo as funções de singularidade, temos:
+
+% \[
+%   V(x) =
+%   \begin{cases}
+%     -\num{3431.43} x + \num{28025.68} & 0 \le x \le \SI{1.056}{\meter}                  \\
+%     -\num{3431.43} x + \num{2647.88}  & \SI{1.056}{\meter} \le x \le \SI{1.256}{\meter} \\
+%     -\num{3431.43} x - \num{22729.92} & \SI{1.256}{\meter} \le x \le \SI{2.212}{\meter}
+%   \end{cases}
+%   \quad \left[ \si{\newton} \right]
+% \]
+
+% \[
+%   M(x) =
+%   \begin{cases}
+%     -\num{1715.72} x^2 + \num{28025.68} x                  & 0 \le x \le \SI{1.056}{\meter}                  \\
+%     -\num{1715.72} x^2 + \num{2647.88} x + \num{26798.96}  & \SI{1.056}{\meter} \le x \le \SI{1.256}{\meter} \\
+%     -\num{1715.72} x^2 - \num{22729.92} x + \num{58673.47} & \SI{1.256}{\meter} \le x \le \SI{2.212}{\meter}
+%   \end{cases}
+%   \quad \left[ \si{\newton\meter} \right]
+% \]
+
+\[
+  V(x) =
+  \begin{cases}
+    \num{26850.58}  & 0 \le x \le \SI{1.2185}{\meter}                  \\
+    -\num{26305.02} & \SI{1.2185}{\meter} \le x \le \SI{1.747}{\meter} \\
+    -\num{27885.02} & \SI{1.747}{\meter} \le x \le \SI{2.437}{\meter}
+  \end{cases}
+  \quad \left[ \si{\newton} \right]
+\]
+
+\[
+  M(x) =
+  \begin{cases}
+    \num{26850.58} x - \num{16384.12}  & 0 \le x \le \SI{1.2185}{\meter}                  \\
+    -\num{26305.02} x + \num{48385.98} & \SI{1.2185}{\meter} \le x \le \SI{1.747}{\meter} \\
+    -\num{27885.02} x + \num{51146.24} & \SI{1.747}{\meter} \le x \le \SI{2.437}{\meter}
+  \end{cases}
+  \quad \left[ \si{\newton\meter} \right]
+\]
+
+Aplicando as equações ao longo do comprimento da viga, tem-se o seguinte diagrama de esforços internos:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{content/sections/04_estrutura/sections/01_pre_dimensionamento_da_viga_vl2/figures/diagrama_vl2.pdf}
+  \caption{Diagrama de esforços internos da viga VL2 (Autor)}
+  \label{fig:diagrama_vl2}
+\end{figure}
