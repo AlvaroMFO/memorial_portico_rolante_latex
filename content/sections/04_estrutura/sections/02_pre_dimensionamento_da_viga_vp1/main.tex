@@ -1,2 +1,213 @@
 A modelagem estática da viga VP1 é apresentada abaixo:
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{content/sections/04_estrutura/sections/02_pre_dimensionamento_da_viga_vp1/figures/predim_vp1.pdf}
+  \caption{Modelagem estática da viga VP1 (Autor)}
+  \label{fig:predim_vp1}
+\end{figure}
+
+As principais distâncias utilizadas na modelagem estática da viga VP1 são:
+
+\begin{table}[H]
+  \centering
+  \caption{Distâncias utilizadas na modelagem estática da viga VP1}
+  \label{tab:distancias_vp1}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Parâmetro                                   & Símbolo & Valor              \\
+    \midrule
+    Vão so pórtico                              & $V$     & \SI{8}{\meter}     \\
+    Distância entre os eixos do motor e redutor & $C$     & \SI{0.444}{\meter} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+A carga $G_9$ é dada pela equação:
+
+\begin{equation}
+  G_9 = \frac{G_{\text{tambor}} + G_{\text{cabo}}}{2} + G_{\text{acoplamento}}
+  \label{eq:g9}
+\end{equation}
+
+\begin{align*}
+  G_9 & = \frac{\num{6611.85} + \num{978.48}}{2} + 540 \\
+  G_9 & = \boxed{\SI{4335.17}{\newton}}
+\end{align*}
+
+O torque da polia compensadora é dado por:
+
+\begin{equation}
+  T_p = 2 \cdot T \cdot d
+  \label{eq:tp}
+\end{equation}
+
+No qual $d$ é a distância entre o cabo e o centro da viga, considerou-se $d = \SI{0.5}{\meter}$.
+
+\begin{align*}
+  T_p & = 2 \cdot \num{25377.8} \cdot \num{0.5} \\
+  T_p & = \boxed{\SI{25377.8}{\newton\meter}}
+\end{align*}
+
+Para o peso da cabine de comando, considerou-se $G_3 = \SI{8000}{\newton}$.
+
+Para o peso do motor, utilizou-se $G_4 = \SI{5200}{\newton}$, com base na massa indicada no catálogo da WEG \cite{weg}, cujos dados estão na Tabela \ref{tab:dados_motor_adotado}.
+
+As principais cargas utilizadas na modelagem estática da viga VP1 são:
+
+\begin{table}[H]
+  \centering
+  \caption{Cargas utilizadas na modelagem estática da viga VP1}
+  \label{tab:cargas_vp1}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Parâmetro                                                 & Símbolo & Valor                 \\
+    \midrule
+    Peso da cabine de comando                                 & $G_3$   & \SI{8000}{\newton}    \\
+    Peso do freio de parada e da polia do freio \eqref{eq:g6} & $G_6$   & \SI{540}{\newton}     \\
+    Peso do motor                                             & $G_4$   & \SI{5200}{\newton}    \\
+    Peso do tambor, cabo e acoplamento do redutor             & $G_9$   & \SI{4335.17}{\newton} \\
+    Tração do cabo \eqref{eq:forca_de_tracao_no_cabo}         & $T$     & \SI{25377.8}{\newton} \\
+    Torque da polia compensadora                              & $T_p$   & \SI{25377.8}{\newton} \\
+    Torque de saída do redutor \eqref{eq:torque_saida}        & $T_R$   & \SI{9150.44}{\newton} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Adotando o mesmo método de análise utilizado para o pré-dimensionamento da viga VL2, obtiveram-se as seguintes equações de esforços internos:
+
+\[
+  V(x) =
+  \begin{cases}
+    \num{12108.33}  & 0 \leq x \leq \SI{3.778}{\meter}              \\
+    \num{11568.33}  & \SI{3.778}{\meter} \leq x \leq \SI{4}{\meter} \\
+    \num{6048.33}   & \SI{4}{\meter} \leq x \leq \SI{4.222}{\meter} \\
+    -\num{23664.64} & \SI{4.222}{\meter} \leq x \leq \SI{8}{\meter} \\
+  \end{cases}
+  \quad \left[ \si{\newton} \right]
+\]
+
+\[
+  M(x) =
+  \begin{cases}
+    \num{12108.33}x - \num{24877.41}   & 0 \leq x \leq \SI{3.778}{\meter}              \\
+    \num{11568.33}x + \num{2540.51}    & \SI{3.778}{\meter} \leq x \leq \SI{4}{\meter} \\
+    \num{6048.33}x + \num{24620.51}    & \SI{4}{\meter} \leq x \leq \SI{4.222}{\meter} \\
+    -\num{23664.64}x + \num{140918.23} & \SI{4.222}{\meter} \leq x \leq \SI{8}{\meter} \\
+  \end{cases}
+  \quad \left[ \si{\newton\meter} \right]
+\]
+
+O diagrama de esforços internos é apresentado na Figura \ref{fig:diagrama_vp1}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{content/sections/04_estrutura/sections/02_pre_dimensionamento_da_viga_vp1/figures/diagrama_vp1.pdf}
+  \caption{Diagrama de esforços internos da viga VP1 (Autor)}
+  \label{fig:diagrama_vp1}
+\end{figure}
+
+Os resultados da modelagem estática da viga VP1 são apresentados na Tabela \ref{tab:resultados_vp1}.
+
+\begin{table}[H]
+  \centering
+  \caption{Resultados da modelagem estática da viga VP1}
+  \label{tab:resultados_vp1}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Parâmetro                    & Símbolo & Valor                        \\
+    \midrule
+    Força de reação no ponto I   & $R_I$   & \SI{16108.33}{\newton}       \\
+    Força de reação no ponto J   & $R_J$   & \SI{23664.64}{\newton}       \\
+    Momento de reação no ponto I & $M_I$   & \SI{24877.41}{\newton\meter} \\
+    Momento de reação no ponto J & $M_J$   & \SI{48398.89}{\newton\meter} \\
+    Momento fletor máximo        & $M_f$   & \SI{50156.56}{\newton\meter} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Utilizando as funções singulares, foram definidas as equações da linha elástica da viga VP1:
+
+\[
+  EI \nu(x) =
+  \begin{cases}
+    \num{2018.05}x^3 - \num{12438.71}x^2                                & 0 \leq x \leq \SI{3.778}{\meter}              \\
+    \num{1928.05}x^3 + \num{1270.25}x^2 - \num{99731.1}x + \num{185965} & \SI{3.778}{\meter} \leq x \leq \SI{4}{\meter} \\
+    \num{1008.05}x^3 + \num{12310.3}x^2 - \num{143891}x + \num{244845}  & \SI{4}{\meter} \leq x \leq \SI{4.222}{\meter} \\
+    -\num{3944.11}x^3 + \num{70459.3}x^2 - \num{370081}x + \num{535986} & \SI{4.222}{\meter} \leq x \leq \SI{8}{\meter} \\
+  \end{cases}
+  \quad \left[ \si{\meter} \right]
+\]
+
+A flecha máxima permitida por requisito do projeto é dada por $\nu_{max} = \frac{V}{900}$, conforme a Tabela \ref{tab:dados_do_projeto}.
+
+\begin{align*}
+  \nu_{max} & = \frac{8}{900}                   \\
+  \nu_{max} & = \boxed{\SI{8.89}{\milli\meter}}
+\end{align*}
+
+O módulo de elasticidade do aço utilizado é de $E = \SI{200}{\giga\pascal}$.
+
+Assim, aplicou-se a equação no ponto $x = \SI{4}{\meter}$ onde ocorre a flecha máxima, para obter o momento de inércia da viga:
+
+\begin{align*}
+  200 \cdot 10^9 \cdot I \cdot -\num{8.89e-3} & = \num{1928.05} \cdot 4^3 + \num{1270.25} \cdot 4^2 - \num{99731.1} \cdot 4 + \num{185965} \\
+  200 \cdot 10^9 \cdot I \cdot -\num{8.89e-3} & = -\num{69240.2}                                                                           \\
+  I                                           & = \frac{-\num{69240.2}}{200 \cdot 10^9 \cdot -\num{8.89e-3}}                               \\
+  I                                           & = \boxed{\SI{3.89e-5}{\meter^4}}
+\end{align*}
+
+\begin{align*}
+  I_{zz} & = I \cdot 10^{12}                     \\
+  I_{zz} & = \SI{3.89e-5} \cdot 10^{12}          \\
+  I_{zz} & = \boxed{\SI{3.89e7}{\milli\meter^4}}
+\end{align*}
+
+Verificando a condição do módulo de resistência à flexão:
+
+\begin{align*}
+  I_{zz}       & \leq \frac{W_{zz} \cdot h}{2}           \\
+  \num{3.89e7} & \leq \frac{350 \cdot 10^3 \cdot 300}{2} \\
+  \num{3.89e7} & \leq \num{5.25e7} \rightarrow \text{OK}
+\end{align*}
+
+Com base no Projeto Preliminar (Figura \ref{fig:alturas_vigas}), foi adotada a seção de $h = \SI{300}{\milli\meter}$.
+
+\begin{table}[H]
+  \centering
+  \caption{Dimensões da seção da viga VP1}
+  \label{tab:dimensoes_vp1}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Parâmetro                      & Símbolo  & Valor                              \\
+    \midrule
+    Altura                         & $h$      & \SI{300}{\milli\meter}             \\
+    Largura                        & $b$      & \SI{100}{\milli\meter}             \\
+    Espessura                      & $e$      & \SI{6.3}{\milli\meter}             \\
+    Módulo de resistência à flexão & $W_{zz}$ & \SI{350e3}{\milli\meter\cubed}     \\
+    Massa por metro quadrado       & $m$      & \SI{49.89}{\kilo\gram\per\meter^2} \\
+    Largura interna                & $b_1$    & \SI{74.8}{\milli\meter}            \\
+    Altura interna                 & $h_1$    & \SI{287.4}{\milli\meter}           \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Calculando o peso da viga VP1:
+
+\begin{align*}
+  A_{\text{chapa}} & = 2 \cdot \left( b + h_1 \right) \cdot V                        \\
+  A_{\text{chapa}} & = 2 \cdot \left( \num{0.1} + \num{0.2874} \right) \cdot \num{8} \\
+  A_{\text{chapa}} & = \boxed{\SI{6.2}{\meter^2}}
+\end{align*}
+
+\begin{align*}
+  M_{\text{chapa}} & = A_{\text{chapa}} \cdot m        \\
+  M_{\text{chapa}} & = \num{6.2} \cdot \num{49.89}     \\
+  M_{\text{chapa}} & = \boxed{\SI{309.32}{\kilo\gram}}
+\end{align*}
+
+\begin{align*}
+  G_{VP} & = M_{\text{chapa}} \cdot g \cdot \num{1.2}    \\
+  G_{VP} & = \num{309.32} \cdot \num{10} \cdot \num{1.2} \\
+  G_{VP} & = \boxed{\SI{3711.84}{\newton}}
+\end{align*}
