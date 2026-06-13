@@ -366,3 +366,122 @@ Aplicando as equações ao longo do comprimento da viga, tem-se o seguinte diagr
   \caption{Diagrama de esforços internos da viga VL2 (Autor)}
   \label{fig:diagrama_vl2}
 \end{figure}
+
+Analisando o diagrama de momento fletor, obteve-se o valor de momento fletor máximo na viga VL2 $M_f = \SI{16809.55}{\newton\meter}$.
+
+O módulo de resistência a flexão é dado por:
+
+\begin{equation}
+  W_f = \frac{M_f}{\sigma_{\text{adm}}}
+\end{equation}
+
+\begin{align*}
+  W_f & = \frac{\num{16809.55}}{\num{187.97e6}} \\
+  W_f & = \boxed{\SI{8.943e-5}{\meter^3}}
+\end{align*}
+
+\begin{equation}
+  W_{zz} = W_f \cdot 10^9
+  \label{eq:w_zz_vl2}
+\end{equation}
+
+\begin{align*}
+  W_{zz} & = \num{8.943e-5} \cdot 10^9             \\
+  W_{zz} & = \boxed{\SI{89426.77}{\milli\meter^3}}
+\end{align*}
+
+Com base no Projeto Preliminar (Figura \ref{fig:alturas_vigas}), a altura da viga é de $h = \SI{210}{\milli\meter}$.
+
+A massa por metro quadrado da chapa de aço utilizada foi obtida nas Propriedades dos Materiais (Figura \ref{fig:chapas_astm_a36_sae_1045}), sendo de $m = \SI{49.89}{\kilo\gram\per\meter^2}$.
+
+\begin{table}[H]
+  \centering
+  \caption{Dimensões da seção da viga VL2}
+  \label{tab:dimensoes_vl2}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Parâmetro                      & Símbolo  & Valor                              \\
+    \midrule
+    Altura                         & $h$      & \SI{210}{\milli\meter}             \\
+    Largura                        & $b$      & \SI{70}{\milli\meter}              \\
+    Espessura                      & $t$      & \SI{6.3}{\milli\meter}             \\
+    Módulo de resistência a flexão & $W_{zz}$ & \SI{165e3}{\milli\meter^3}         \\
+    Massa por metro quadrado       & $m$      & \SI{49.89}{\kilo\gram\per\meter^2} \\
+    Largura interna                & $b_1$    & \SI{44.8}{\milli\meter}            \\
+    Altura interna                 & $h_1$    & \SI{197.4}{\milli\meter}           \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+O peso da viga VL2 é dado por:
+
+\begin{equation}
+  G_{VL} = M_{\text{chapa}} \cdot g \cdot \num{1.3}
+  \label{eq:g_vl2}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $G_{VL}$: peso da viga VL2 em \si{\newton}.
+  \item $M_{\text{chapa}}$: massa da chapa de aço em \si{\kilo\gram}.
+  \item $g$: aceleração da gravidade em \si{\meter\per\second^2}.
+\end{itemize}
+
+\vspace{1em}
+
+A massa da chapa de aço é dada por:
+
+\begin{equation}
+  M_{\text{chapa}} = A_{\text{chapa}} \cdot m
+  \label{eq:m_chapa_vl2}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $M_{\text{chapa}}$: massa da chapa de aço em \si{\kilo\gram}.
+  \item $A_{\text{chapa}}$: área da chapa de aço em \si{\meter^2}.
+  \item $m$: massa por metro quadrado da chapa de aço em \si{\kilo\gram\per\meter^2}.
+\end{itemize}
+
+\vspace{1em}
+
+A área da chapa de aço é dada por:
+
+\begin{equation}
+  A_{\text{chapa}} = 2 \cdot \left( b + h_1 \right) \cdot L
+  \label{eq:a_chapa_vl2}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item $A_{\text{chapa}}$: área da chapa de aço em \si{\meter^2}.
+  \item $b$: largura da chapa de aço em \si{\milli\meter}.
+  \item $h_1$: altura interna da chapa de aço em \si{\milli\meter}.
+  \item $L$: comprimento do pórtico em \si{\meter} \eqref{eq:comprimento_portico}.
+\end{itemize}
+
+\vspace{1em}
+
+Substituindo os valores na equação \eqref{eq:a_chapa_vl2}:
+
+\begin{align*}
+  A_{\text{chapa}} & = 2 \cdot \left( \num{0.07} + \num{0.1974} \right) \cdot \num{2.437} \\
+  A_{\text{chapa}} & = \boxed{\SI{1.3}{\meter^2}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:m_chapa_vl2}:
+
+\begin{align*}
+  M_{\text{chapa}} & = \num{1.3} \cdot \num{49.89}    \\
+  M_{\text{chapa}} & = \boxed{\SI{64.86}{\kilo\gram}}
+\end{align*}
+
+Substituindo os valores na equação \eqref{eq:g_vl2}:
+
+\begin{align*}
+  G_{VL} & = \num{64.86} \cdot \num{10} \cdot \num{1.3} \\
+  G_{VL} & = \boxed{\SI{843.18}{\newton}}
+\end{align*}
