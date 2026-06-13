@@ -16,4 +16,43 @@ As cargas atuantes na estrutura, considerando o peso dos componentes, são as se
   \label{fig:cargas_estrutura}
 \end{figure}
 
-O material utilizado nas vigas é o aço estrutural ASTM A36.
+O material utilizado nas vigas é o aço estrutural ASTM A36, cujas tensões, obtidas nas Propriedades dos Materiais (Figura \ref{fig:tensoes_acos_estruturais}), são:
+
+\begin{table}[H]
+  \centering
+  \caption{Tensões admissíveis do Aço A36}
+  \label{tab:tensoes_admissiveis_aco_a36}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Parâmetro             & Símbolo    & Valor                  \\
+    \midrule
+    Tensão de escoamento  & $\sigma_e$ & \SI{250}{\mega\pascal} \\
+    Tensão de resistência & $\sigma_R$ & \SI{450}{\mega\pascal} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+A tensão de flexão admissível para o Aço A36 é dada pela equação:
+
+\begin{equation}
+  \sigma_{\text{adm}} = \frac{\sigma_e}{\num{1.33}}
+  \label{eq:tensao_admissivel_aco_a36}
+\end{equation}
+
+\begin{align*}
+  \sigma_{\text{adm}} & = \frac{250}{\num{1.33}}            \\
+  \sigma_{\text{adm}} & = \boxed{\SI{187.97}{\mega\pascal}}
+\end{align*}
+
+A tensão de cisalhamento admissível para o Aço A36 é dada pela equação:
+
+\begin{equation}
+  \tau_{\text{adm}} = \frac{\sigma_e}{\sqrt{3}}
+  \label{eq:tensao_cisalhamento_admissivel_aco_a36}
+\end{equation}
+
+\begin{align*}
+  \tau_{\text{adm}} & = \frac{250}{\sqrt{3}}              \\
+  \tau_{\text{adm}} & = \boxed{\SI{108.53}{\mega\pascal}}
+\end{align*}
+
