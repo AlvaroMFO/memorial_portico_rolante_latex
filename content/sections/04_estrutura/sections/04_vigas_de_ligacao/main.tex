@@ -1,0 +1,144 @@
+Para dimensionar as vigas de ligação, realizou-se a modelagem estática considerando apenas peso e apenas carga.
+
+Os dados obtidos nas modelagens foram:
+
+\begin{table}[H]
+  \centering
+  \caption{Dados obtidos nas modelagens}
+  \label{tab:dados_modelagens_vigas_de_ligacao}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    Parâmetro                 & Símbolo & Valor                        \\
+    \midrule
+    Força cortante (só peso)  & $V_G$   & \SI{1508.26}{\newton}        \\
+    Força cortante (só carga) & $V_L$   & \SI{25377.8}{\newton}        \\
+    Momento fletor (só peso)  & $M_G$   & \SI{1462.58}{\newton\meter}  \\
+    Momento fletor (só carga) & $M_L$   & \SI{15461.43}{\newton\meter} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Calculando os momentos de inércia da viga de ligação:
+
+\begin{align*}
+  I_{\overline{z}_1} & = \frac{b \cdot e^3}{12}                     \\
+  I_{\overline{z}_1} & = \frac{\num{0.07} \cdot \num{0.0063}^3}{12} \\
+  I_{\overline{z}_1} & = \boxed{\SI{1.4586e-9}{\meter^4}}
+\end{align*}
+
+\begin{align*}
+  A_1 & = b \cdot e                      \\
+  A_1 & = \num{0.07} \cdot \num{0.0063}  \\
+  A_1 & = \boxed{\SI{4.41e-4}{\meter^2}}
+\end{align*}
+
+\begin{align*}
+  I_{\overline{z}_3} & = \frac{e \cdot {h_1}^3}{12}                   \\
+  I_{\overline{z}_3} & = \frac{\num{0.0063} \cdot \num{0.1974}^3}{12} \\
+  I_{\overline{z}_3} & = \boxed{\SI{4.0383e-6}{\meter^4}}
+\end{align*}
+
+\begin{align*}
+  \overline{y}_1 & = \frac{h_1 + e}{2}                     \\
+  \overline{y}_1 & = \frac{\num{0.1974} + \num{0.0063}}{2} \\
+  \overline{y}_1 & = \boxed{\SI{0.10185}{\meter}}
+\end{align*}
+
+\begin{align*}
+  I_z & = 2 \left( I_{\overline{z}_1} + A_1 \cdot {\overline{y}_1}^2 + I_{\overline{z}_3} \right)  \\
+  I_z & = 2 \left( \num{1.4586e-9} + \num{4.41e-4} \cdot \num{0.10185}^2 + \num{4.0383e-6} \right) \\
+  I_z & = \boxed{\SI{1.72289e-5}{\meter^4}}
+\end{align*}
+
+Calculando o momento de área:
+
+\begin{align*}
+  {A_1}' & = b \cdot e                      \\
+  {A_1}' & = \num{0.07} \cdot \num{0.0063}  \\
+  {A_1}' & = \boxed{\SI{4.41e-4}{\meter^2}}
+\end{align*}
+
+\begin{align*}
+  {y_1}' & = \frac{h_1 + e}{2}                     \\
+  {y_1}' & = \frac{\num{0.1974} + \num{0.0063}}{2} \\
+  {y_1}' & = \boxed{\SI{101.85e-3}{\meter}}
+\end{align*}
+
+\begin{align*}
+  {A_3}' & = \frac{{h_1}^2 + e}{2}                   \\
+  {A_3}' & = \frac{\num{0.1974}^2 + \num{0.0063}}{2} \\
+  {A_3}' & = \boxed{\SI{6.2181e-4}{\meter^2}}
+\end{align*}
+
+\begin{align*}
+  {y_3}' & = \frac{h_1}{4}                 \\
+  {y_3}' & = \frac{\num{0.1974}}{4}        \\
+  {y_3}' & = \boxed{\SI{4.935e-2}{\meter}}
+\end{align*}
+
+\begin{align*}
+  Q_z & = {A_1}' \cdot {y_1}' + 2 \left( {A_3}' \cdot {y_3}' \right)                                  \\
+  Q_z & = \num{4.41e-4} \cdot \num{101.85e-3} + 2 \left( \num{6.2181e-4} \cdot \num{4.935e-2} \right) \\
+  Q_z & = \boxed{\SI{1.0629e-4}{\meter^3}}
+\end{align*}
+
+Calculando a área média:
+
+\begin{align*}
+  @ & = \left( h - e \right) \cdot \left( b - 3 e \right)                                                 \\
+  @ & = \left( \num{0.1974} - \num{0.0063} \right) \cdot \left( \num{0.07} - 3 \cdot \num{0.0063} \right) \\
+  @ & = \boxed{\SI{10.4091e-3}{\meter^2}}
+\end{align*}
+
+Calculando as tensões de cisalhamento:
+
+\begin{align*}
+  t & = 2e                           \\
+  t & = 2 \cdot \num{0.0063}         \\
+  t & = \boxed{\SI{12.6e-3}{\meter}}
+\end{align*}
+
+\begin{align*}
+  \tau_V & = \frac{\left( V_G + V_L \right) \cdot Q_z}{t \cdot I_z}                                                          \\
+  \tau_V & = \frac{\left( \num{1508.26} + \num{25377.8} \right) \cdot \num{1.0629e-4}}{\num{12.6e-3} \cdot \num{1.72289e-5}} \\
+  \tau_V & = \boxed{\SI{13.1641}{\mega\pascal}}
+\end{align*}
+
+\begin{align*}
+  \tau_T & = \frac{T_p}{t \cdot @ \cdot 2}                                       \\
+  \tau_T & = \frac{\num{15226.68}}{\num{12.6e-3} \cdot \num{10.4091e-3} \cdot 2} \\
+  \tau_T & = \boxed{\SI{58.05}{\mega\pascal}}
+\end{align*}
+
+Calculando a tensão de flexão:
+
+Com base na norma NBR 8400 Tabela 5 \cite{nbr8400}, obteve-se o fator $m_x = 1$, para o grupo de classificação 2 (Tabela \ref{tab:dados_do_projeto}).
+
+A Tabela 5 da norma NBR 8400 \cite{nbr8400} fornece o fator $\psi$, para $V_L = \SI{0.1}{\meter\per\second}$, $\psi = \num{1.15}$.
+
+\begin{align*}
+  y & = \frac{h}{2}                 \\
+  y & = \frac{\num{0.21}}{2}        \\
+  y & = \boxed{\SI{105e-3}{\meter}}
+\end{align*}
+
+\begin{align*}
+  \sigma_M & = m_x \cdot \left( \frac{M_G}{I_z} \cdot y + \psi \cdot \frac{M_L}{I_z} \cdot y \right)                                                                          \\
+  \sigma_M & = 1 \cdot \left( \frac{\num{1462.58}}{\num{1.72289e-5}} \cdot \num{105e-3} + \num{1.15} \cdot \frac{\num{15461.43}}{\num{1.72289e-5}} \cdot \num{105e-3} \right) \\
+  \sigma_M & = \boxed{\SI{117.276}{\mega\pascal}}
+\end{align*}
+
+Calculando a tensão equivalente:
+
+\begin{align*}
+  \sigma_c & = \sqrt{{\sigma_f}^2 + 3 \left( \tau_V + \tau_T \right)^2 }                  \\
+  \sigma_c & = \sqrt{{\num{117.276}}^2 + 3 \left( \num{13.1641} + \num{58.05} \right)^2 } \\
+  \sigma_c & = \boxed{\SI{170.2}{\mega\pascal}}
+\end{align*}
+
+Verificando a condição da tensão admissível:
+
+\begin{align*}
+  \sigma_c                 & \leq \sigma_{\text{adm}}                             \\
+  \SI{170.2}{\mega\pascal} & \leq \SI{187.97}{\mega\pascal} \rightarrow \text{OK}
+\end{align*}
